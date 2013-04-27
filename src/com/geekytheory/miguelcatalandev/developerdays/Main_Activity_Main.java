@@ -1,21 +1,20 @@
 package com.geekytheory.miguelcatalandev.developerdays;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
 
-public class Main_Activity_Main extends Activity {
+import android.os.Bundle;
+
+public class Main_Activity_Main extends SherlockActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main__activity__main);
+		setContentView(R.layout.main_activity_main);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main__activity__main, menu);
 		return true;
 	}
 
