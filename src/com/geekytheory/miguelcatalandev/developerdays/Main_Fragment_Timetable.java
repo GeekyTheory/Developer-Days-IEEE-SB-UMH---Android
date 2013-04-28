@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-public class Main_Fragment_Timetable extends Fragment{
+public class Main_Fragment_Timetable extends Fragment {
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -23,5 +23,10 @@ public class Main_Fragment_Timetable extends Fragment{
 		return view;
 	}
 
-	
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		setUserVisibleHint(true);
+	}
+
 }

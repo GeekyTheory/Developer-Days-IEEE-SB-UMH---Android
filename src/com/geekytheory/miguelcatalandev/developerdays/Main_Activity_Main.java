@@ -19,18 +19,15 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 		initializePaging();
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		return true;
-	}
-
 	private void initializePaging() {
 		Main_Fragment_Places mfragmentOne = new Main_Fragment_Places();
 		Main_Fragment_Places mfragmentTwo = new Main_Fragment_Places();
 		Main_Fragment_Places mfragmentThree = new Main_Fragment_Places();
 
-		Main_Adapter_ViewPager mPagerAdapter = new Main_Adapter_ViewPager(getSupportFragmentManager());
-		mPagerAdapter.setTitles(getResources().getStringArray(R.array.Main_Titles));
+		Main_Adapter_ViewPager mPagerAdapter = new Main_Adapter_ViewPager(
+				getSupportFragmentManager());
+		mPagerAdapter.setTitles(getResources().getStringArray(
+				R.array.Main_Titles));
 		mPagerAdapter.addFragment(mfragmentOne);
 		mPagerAdapter.addFragment(mfragmentTwo);
 		mPagerAdapter.addFragment(mfragmentThree);

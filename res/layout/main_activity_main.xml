@@ -3,21 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
+    android:background="@color/dd_tabindicator_background"
     android:orientation="vertical"
     android:padding="0dp" >
 
     <com.viewpagerindicator.TabPageIndicator
-        style="@style/CustomTabPageIndicator"
-        android:background="@drawable/tab_indicator_ab_actionbar_developerdays"
         android:id="@+id/main_indicator"
+        style="@style/CustomTabPageIndicator"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="0dp" />
+        android:layout_margin="0dp"
+        android:background="@drawable/tab_indicator_ab_actionbar_developerdays" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/main_viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:background="@color/abs__background_holo_light" />
 
 </LinearLayout>

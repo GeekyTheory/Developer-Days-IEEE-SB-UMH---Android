@@ -21,4 +21,10 @@ public class Main_Fragment_Social extends Fragment {
 				false);
 		return view;
 	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		setUserVisibleHint(true);
+	}
 }

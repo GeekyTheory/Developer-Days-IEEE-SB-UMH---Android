@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- File created by the Android Action Bar Style Generator
+<!--
+     File created by the Android Action Bar Style Generator
 
      Copyright (C) 2011 The Android Open Source Project
      Copyright (C) 2012 readyState Software Ltd
@@ -14,7 +15,7 @@
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
-     limitations under the License.
+     limitations under the License.
 -->
 
 <resources>
@@ -31,9 +32,8 @@
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbar_developerdays</item>
         <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
 
-                <!-- Light.DarkActionBar specific -->
+        <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Actionbar_developerdays.Widget</item>
-
     </style>
 
     <style name="ActionBar.Solid.Actionbar_developerdays" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
@@ -49,11 +49,11 @@
         <item name="progressBarStyle">@style/ProgressBar.Actionbar_developerdays</item>
         <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
-	
-    <style name="PopupMenu.Actionbar_developerdays" parent="@style/Widget.Sherlock.ListPopupWindow">	
-        <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbar_developerdays</item>	
+
+    <style name="PopupMenu.Actionbar_developerdays" parent="@style/Widget.Sherlock.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbar_developerdays</item>
     </style>
-	
+
     <style name="DropDownListView.Actionbar_developerdays" parent="@style/Widget.Sherlock.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_actionbar_developerdays</item>
     </style>
@@ -61,21 +61,21 @@
     <style name="ActionBarTabStyle.Actionbar_developerdays" parent="@style/Widget.Sherlock.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_actionbar_developerdays</item>
     </style>
-	
+
     <style name="DropDownNav.Actionbar_developerdays" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
         <item name="android:background">@drawable/spinner_background_ab_actionbar_developerdays</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbar_developerdays</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_actionbar_developerdays</item>
     </style>
-    
+
     <style name="ProgressBar.Actionbar_developerdays" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_actionbar_developerdays</item>
     </style>
-    
+
     <style name="ActionButton.CloseMode.Actionbar_developerdays" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_actionbar_developerdays</item>
     </style>
-    
+
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Actionbar_developerdays.Widget" parent="@style/Theme.Sherlock">
         <item name="popupMenuStyle">@style/PopupMenu.Actionbar_developerdays</item>
