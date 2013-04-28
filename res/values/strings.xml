@@ -3,6 +3,10 @@
 
     <string name="app_name">Developer Days</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+
+    <!-- VIEWPAGER -->
+    <string name="main_viewpagerindicator_timetable">AGENDA</string>
+    <string name="main_viewpagerindicator_places">EXPLORE</string>
+    <string name="main_viewpagerindicator_social">STREAM</string>
 
 </resources>

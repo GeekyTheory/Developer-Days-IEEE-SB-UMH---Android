@@ -19,4 +19,5 @@
 
 <resources>
     <color name="pressed_actionbar_developerdays">#CC99CC00</color>
+    <color name="actionbar_developerdays_background">#2d2d2d</color>
 </resources>

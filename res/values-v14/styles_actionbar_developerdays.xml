@@ -29,6 +29,7 @@
         <item name="android:actionModeBackground">@drawable/cab_background_top_actionbar_developerdays</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_actionbar_developerdays</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbar_developerdays</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
         
                 <!-- Light.DarkActionBar specific -->
         <item name="android:actionBarWidgetTheme">@style/Theme.Actionbar_developerdays.Widget</item>
@@ -40,11 +41,13 @@
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_actionbar_developerdays</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_actionbar_developerdays</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Actionbar_developerdays</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
 
     <style name="ActionBar.Transparent.Actionbar_developerdays" parent="@style/Widget.Sherlock.ActionBar">
         <item name="android:background">@drawable/ab_transparent_actionbar_developerdays</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Actionbar_developerdays</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
     
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->

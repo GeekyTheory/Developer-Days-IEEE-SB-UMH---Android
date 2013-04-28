@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Main_Titles">
+        <item>@string/main_viewpagerindicator_timetable</item>
+        <item>@string/main_viewpagerindicator_places</item>
+        <item>@string/main_viewpagerindicator_social</item>
+    </string-array>
+
+</resources>

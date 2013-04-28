@@ -29,6 +29,7 @@
         <item name="actionModeBackground">@drawable/cab_background_top_actionbar_developerdays</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_actionbar_developerdays</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbar_developerdays</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
 
                 <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Actionbar_developerdays.Widget</item>
@@ -40,11 +41,13 @@
         <item name="backgroundStacked">@drawable/ab_stacked_solid_actionbar_developerdays</item>
         <item name="backgroundSplit">@drawable/ab_bottom_solid_actionbar_developerdays</item>
         <item name="progressBarStyle">@style/ProgressBar.Actionbar_developerdays</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
 
     <style name="ActionBar.Transparent.Actionbar_developerdays" parent="@style/Widget.Sherlock.ActionBar">
         <item name="background">@drawable/ab_transparent_actionbar_developerdays</item>
         <item name="progressBarStyle">@style/ProgressBar.Actionbar_developerdays</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
 	
     <style name="PopupMenu.Actionbar_developerdays" parent="@style/Widget.Sherlock.ListPopupWindow">	
