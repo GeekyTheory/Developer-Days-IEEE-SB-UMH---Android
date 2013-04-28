@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
 public class Main_Fragment_Places extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -22,9 +20,4 @@ public class Main_Fragment_Places extends Fragment {
 		return view;
 	}
 
-	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		setUserVisibleHint(true);
-	}
 }

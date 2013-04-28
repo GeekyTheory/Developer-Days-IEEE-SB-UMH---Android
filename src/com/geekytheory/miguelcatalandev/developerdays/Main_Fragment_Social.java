@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
 public class Main_Fragment_Social extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -20,11 +18,5 @@ public class Main_Fragment_Social extends Fragment {
 		View view = inflater.inflate(R.layout.main_fragment_social, container,
 				false);
 		return view;
-	}
-
-	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		setUserVisibleHint(true);
 	}
 }

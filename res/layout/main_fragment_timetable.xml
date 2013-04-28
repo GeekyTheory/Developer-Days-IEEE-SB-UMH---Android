@@ -1,8 +1,589 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:background="@color/abs__background_holo_light"
+    android:padding="0dp" >
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/SectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timetable_time_first" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="8" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_button_reception"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_reception" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="9" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_button_opening"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_opening" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="10" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_button_tecnical"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_tecnical" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="12" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_button_linux"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_linux" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/dd_timetable_hour_brackground" />
+
+                <Button
+                    android:id="@+id/timetable_button_wp"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_wp" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="14" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_lunch"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_lunch" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="16" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_otp"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_otp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/dd_timetable_hour_brackground" />
+
+                <Button
+                    android:id="@+id/timetable_talks_opencv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_opencv" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="18" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_wp2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_wp2" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/dd_timetable_hour_brackground" />
+
+                <Button
+                    android:id="@+id/timetable_talks_arduino"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_arduino" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/SectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timetable_time_last" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="9" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_button_reception"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_reception" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="10" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_node"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_node" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/dd_timetable_hour_brackground" />
+
+                <Button
+                    android:id="@+id/timetable_talks_money"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_money" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="12" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_ieee"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_ieee" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="14" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_lunch_2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_lunch" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="16" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_intelec"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_intelec" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/dd_timetable_hour_brackground" />
+
+                <Button
+                    android:id="@+id/timetable_talks_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_chat" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="18" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_microsoft"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_microsoft" />
+            </TableRow>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/timetable_row_height" >
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dd_timetable_hour_brackground"
+                    android:padding="5dp"
+                    android:text="18" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/timetable_talks_closing"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_closing" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

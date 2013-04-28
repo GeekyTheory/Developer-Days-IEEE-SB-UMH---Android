@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
 public class Main_Fragment_Timetable extends Fragment {
 
 	@Override
@@ -21,12 +19,6 @@ public class Main_Fragment_Timetable extends Fragment {
 		View view = inflater.inflate(R.layout.main_fragment_timetable,
 				container, false);
 		return view;
-	}
-
-	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		setUserVisibleHint(true);
 	}
 
 }

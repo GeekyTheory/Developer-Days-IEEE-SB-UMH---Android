@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dd_tabindicator_text">#FFF</color>
+    
+    <!-- General -->
+    <color name="dd_header_texview">#000000</color>
+    <color name="dd_header_texview_line">#AAAAAA</color>
+    
+    <!-- TabIndicator -->
+    <color name="dd_tabindicator_text">#FFFFFF</color>
     <color name="dd_tabindicator_background">#99CC00</color>
+    
+    <!-- TimeTable -->
+    <color name="dd_timetable_hour_brackground">#E1E1E1E1</color>
 </resources>

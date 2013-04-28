@@ -1,7 +1,6 @@
 package com.geekytheory.miguelcatalandev.developerdays;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
 import com.geekytheory.miguelcatalandev.developerdays.adapters.Main_Adapter_ViewPager;
 import com.viewpagerindicator.TabPageIndicator;
 
@@ -20,9 +19,9 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 	}
 
 	private void initializePaging() {
-		Main_Fragment_Places mfragmentOne = new Main_Fragment_Places();
+		Main_Fragment_Timetable mfragmentOne = new Main_Fragment_Timetable();
 		Main_Fragment_Places mfragmentTwo = new Main_Fragment_Places();
-		Main_Fragment_Places mfragmentThree = new Main_Fragment_Places();
+		Main_Fragment_Social mfragmentThree = new Main_Fragment_Social();
 
 		Main_Adapter_ViewPager mPagerAdapter = new Main_Adapter_ViewPager(
 				getSupportFragmentManager());
