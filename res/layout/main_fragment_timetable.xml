@@ -431,8 +431,6 @@
                 android:layout_height="1dp"
                 android:background="@color/dd_timetable_hour_brackground" />
 
-            
-
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
@@ -550,6 +548,7 @@
                     android:padding="0dp"
                     android:text="@string/timetable_talks_microsoft" />
             </TableRow>
+
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"

@@ -8,26 +8,33 @@
     <string name="main_viewpagerindicator_timetable">AGENDA</string>
     <string name="main_viewpagerindicator_places">EXPLORE</string>
     <string name="main_viewpagerindicator_social">STREAM</string>
-    
+
     <!-- TIMETABLE -->
     <string name="timetable_time_first">JUEVES 16/05/2013</string>
     <string name="timetable_time_last">VIERNES 17/05/2013</string>
-	<string name="timetable_talks_reception">Recepción</string>
-	<string name="timetable_talks_opening">Acto de apertura</string>
-	<string name="timetable_talks_tecnical">Charlas técnicas</string>
-	<string name="timetable_talks_linux">Taller Linux</string>
-	<string name="timetable_talks_wp">Taller Windows Phone</string>
-	<string name="timetable_talks_lunch">Comida y networking</string>
-	<string name="timetable_talks_otp">Taller Erlang/OTP</string>
-	<string name="timetable_talks_opencv">Taller OpenCV</string>
-	<string name="timetable_talks_wp2">Taller Windows Phone</string>
-	<string name="timetable_talks_arduino">Taller Arduino</string>
-	<string name="timetable_talks_node">Taller Node.js</string>
-	<string name="timetable_talks_money">Taller Monetización</string>
-	<string name="timetable_talks_ieee">Charla Juan Carlos Dueñas</string>
-	<string name="timetable_talks_intelec">Charla INTELEC</string>
-	<string name="timetable_talks_chat">Taller Chat punto a punto</string>
-	<string name="timetable_talks_microsoft">Charla Microsoft</string>
-	<string name="timetable_talks_closing">Acto de clausura</string>
-	
+    <string name="timetable_talks_reception">Recepción</string>
+    <string name="timetable_talks_opening">Acto de apertura</string>
+    <string name="timetable_talks_tecnical">Charlas técnicas</string>
+    <string name="timetable_talks_linux">Taller Linux</string>
+    <string name="timetable_talks_wp">Taller Windows Phone</string>
+    <string name="timetable_talks_lunch">Comida y networking</string>
+    <string name="timetable_talks_otp">Taller Erlang/OTP</string>
+    <string name="timetable_talks_opencv">Taller OpenCV</string>
+    <string name="timetable_talks_wp2">Taller Windows Phone</string>
+    <string name="timetable_talks_arduino">Taller Arduino</string>
+    <string name="timetable_talks_node">Taller Node.js</string>
+    <string name="timetable_talks_money">Taller Monetización</string>
+    <string name="timetable_talks_ieee">Charla Juan Carlos Dueñas</string>
+    <string name="timetable_talks_intelec">Charla INTELEC</string>
+    <string name="timetable_talks_chat">Taller Chat punto a punto</string>
+    <string name="timetable_talks_microsoft">Charla Microsoft</string>
+    <string name="timetable_talks_closing">Acto de clausura</string>
+
+    <!-- PLACES -->
+    <string name="places_textview_map">Maps</string>
+    <string name="places_locations_talks">Localización de las charlas</string>
+    <string name="places_locations_hackathon">Localización del hackathon</string>
+    <string name="places_locations_lunch">Cafetería / Restaurante</string>
+    <string name="places_locations_parking">Aparcamientos</string>
+
 </resources>

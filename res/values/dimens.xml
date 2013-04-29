@@ -6,4 +6,8 @@
     
     <!-- Timetable -->
 	<dimen name="timetable_row_height">60dp</dimen>
+	
+	<!-- Places -->
+	<dimen name="places_imageview_height_map">150dp</dimen>
+	<dimen name="places_textview_size_map">25sp</dimen>
 </resources>
