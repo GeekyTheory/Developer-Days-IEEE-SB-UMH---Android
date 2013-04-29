@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res/com.geekytheory.miguelcatalandev.developerdays"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_shape_normal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/social_itemtweet_imageView_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/person_image_empty" />
+
+        <TextView
+            android:id="@+id/social_itemtweet_textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/social_itemtweet_imageView_user"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/social_itemtweet_imageView_user"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/social_itemtweet_textview_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/social_itemtweet_textview_name"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/social_itemtweet_textview_name"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/social_itemtweet_textview_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <com.geekytheory.miguelcatalandev.developerdays.utils.RobotoTextView
+            android:id="@+id/social_itemtweet_textview_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/social_itemtweet_textview_name"
+            android:layout_below="@+id/social_itemtweet_textview_name"
+            fonts:font="Roboto" />
+    </RelativeLayout>
+
+</LinearLayout>

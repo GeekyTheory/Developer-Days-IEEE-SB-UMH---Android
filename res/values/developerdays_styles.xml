@@ -55,6 +55,7 @@
 
     <style name="ListViewdeveloperdays" parent="android:Widget.ListView">
         <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+        <item name="android:divider">#00000000</item>
     </style>
 
     <style name="ListViewdeveloperdays.White" parent="android:Widget.ListView.White">
