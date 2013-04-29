@@ -24,6 +24,8 @@ import com.geekytheory.miguelcatalandev.developerdays.objects.Tweet;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -68,7 +70,13 @@ public class Main_Fragment_Social extends ListFragment {
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
+		final Tweet tweet = tweets.get(position);
+		String url = "https://twitter.com/" + tweet.getUserNick() + "/status/"
+				+ tweet.getTweetUrl();
 
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		intent.setData(Uri.parse(url));
+		startActivity(intent);
 	}
 
 	private class DowloadTweets extends AsyncTask<String, Void, Boolean> {
@@ -122,6 +130,7 @@ public class Main_Fragment_Social extends ListFragment {
 							+ itemjson.getString("created_at")));
 					tweet.setUserImageUrl(itemjson
 							.getString("profile_image_url"));
+					tweet.setTweetUrl(itemjson.getString("id_str"));
 					tweets.add(tweet);
 				}
 			} catch (Exception e) {

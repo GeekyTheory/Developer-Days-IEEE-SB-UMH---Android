@@ -4,18 +4,20 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import com.geekytheory.miguelcatalandev.developerdays.R;
+import com.geekytheory.miguelcatalandev.developerdays.images.ImageLoader;
 import com.geekytheory.miguelcatalandev.developerdays.objects.Tweet;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Social_Adapter_Tweets extends ArrayAdapter<Object> {
 	Context context;
 	private ArrayList<Tweet> tweets;
+	ImageLoader imgLoader;
 	Date todayTime = new Date();
 	final long MILLSECS_PER_MIN = 60 * 1000;
 
@@ -23,6 +25,7 @@ public class Social_Adapter_Tweets extends ArrayAdapter<Object> {
 		super(context, R.layout.item_tweet);
 		this.context = context;
 		this.tweets = tweets;
+		this.imgLoader = new ImageLoader(context);
 	}
 
 	@Override
@@ -30,29 +33,50 @@ public class Social_Adapter_Tweets extends ArrayAdapter<Object> {
 		return tweets.size();
 	}
 
+	private static class PlaceHolder {
+
+		TextView name;
+		TextView nick;
+		TextView time;
+		TextView content;
+		ImageView image;
+
+		public static PlaceHolder generate(View convertView) {
+			PlaceHolder placeHolder = new PlaceHolder();
+			placeHolder.name = (TextView) convertView
+					.findViewById(R.id.social_itemtweet_textview_name);
+			placeHolder.nick = (TextView) convertView
+					.findViewById(R.id.social_itemtweet_textview_user);
+			placeHolder.time = (TextView) convertView
+					.findViewById(R.id.social_itemtweet_textview_time);
+			placeHolder.content = (TextView) convertView
+					.findViewById(R.id.social_itemtweet_textview_content);
+			placeHolder.image = (ImageView) convertView
+					.findViewById(R.id.social_itemtweet_imageView_user);
+			return placeHolder;
+		}
+
+	}
+
 	public View getView(int position, View convertView, ViewGroup parent) {
-		LayoutInflater inflater = (LayoutInflater) context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-		View item = inflater.inflate(R.layout.item_tweet, null);
-
-		TextView lblUserName = (TextView) item
-				.findViewById(R.id.social_itemtweet_textview_name);
-		lblUserName.setText(tweets.get(position).getUserName());
-
-		TextView lblUserNick = (TextView) item
-				.findViewById(R.id.social_itemtweet_textview_user);
-		lblUserNick.setText("@" + tweets.get(position).getUserNick());
-
-		TextView lbltime = (TextView) item
-				.findViewById(R.id.social_itemtweet_textview_time);
-		lbltime.setText(getDiferenceTimeString(tweets.get(position)
+		PlaceHolder placeHolder;
+		if (convertView == null) {
+			convertView = View.inflate(context, R.layout.item_tweet, null);
+			placeHolder = PlaceHolder.generate(convertView);
+			convertView.setTag(placeHolder);
+		} else {
+			placeHolder = (PlaceHolder) convertView.getTag();
+		}
+		placeHolder.name.setText(tweets.get(position).getUserName());
+		placeHolder.nick.setText("@" + tweets.get(position).getUserNick());
+		placeHolder.time.setText(getDiferenceTimeString(tweets.get(position)
 				.getTweetTime()));
+		placeHolder.content.setText(tweets.get(position).getTweet());
 
-		TextView lblTweet = (TextView) item
-				.findViewById(R.id.social_itemtweet_textview_content);
-		lblTweet.setText(tweets.get(position).getTweet());
-		return (item);
+		placeHolder.image.setImageResource(R.drawable.person_image_empty);
+		imgLoader.DisplayImage(tweets.get(position).getUserImageUrl(),
+				placeHolder.image);
+		return (convertView);
 	}
 
 	private String getDiferenceTimeString(Date tweetDate) {
