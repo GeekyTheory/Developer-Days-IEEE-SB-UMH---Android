@@ -7,6 +7,7 @@ public class Tweet {
 	private String userNick;
 	private String tweetContent;
 	private String imageUrl;
+	private String tweetUrl;
 	private Date postedTime;
 	
 	public void setUserName(String u){
@@ -23,6 +24,10 @@ public class Tweet {
 	
 	public void setUserImageUrl(String url) {
 		this.imageUrl = url;
+	}
+	
+	public void setTweetUrl(String url) {
+		this.tweetUrl = url;
 	}
 	
 	public void setTweetTime(Date time) {
@@ -43,6 +48,10 @@ public class Tweet {
 	
 	public String getUserImageUrl(){
 		return this.imageUrl;
+	}
+	
+	public String getTweetUrl(){
+		return this.tweetUrl;
 	}
 	
 	public Date getTweetTime(){
