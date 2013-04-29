@@ -71,8 +71,9 @@ public class Main_Fragment_Social extends ListFragment {
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		final Tweet tweet = tweets.get(position);
-		String url = "https://twitter.com/"+tweet.getUserNick()+"/status/"+tweet.getTweetUrl();
-		
+		String url = "https://twitter.com/" + tweet.getUserNick() + "/status/"
+				+ tweet.getTweetUrl();
+
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri.parse(url));
 		startActivity(intent);
@@ -129,8 +130,7 @@ public class Main_Fragment_Social extends ListFragment {
 							+ itemjson.getString("created_at")));
 					tweet.setUserImageUrl(itemjson
 							.getString("profile_image_url"));
-					tweet.setTweetUrl(itemjson
-							.getString("id_str"));
+					tweet.setTweetUrl(itemjson.getString("id_str"));
 					tweets.add(tweet);
 				}
 			} catch (Exception e) {
