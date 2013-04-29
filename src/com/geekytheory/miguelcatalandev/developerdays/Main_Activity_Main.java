@@ -1,6 +1,8 @@
 package com.geekytheory.miguelcatalandev.developerdays;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 import com.geekytheory.miguelcatalandev.developerdays.adapters.Main_Adapter_ViewPager;
 import com.viewpagerindicator.TabPageIndicator;
 
@@ -16,6 +18,13 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity_main);
 		initializePaging();
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getSupportMenuInflater();
+		inflater.inflate(R.menu.main_activity_main, menu);
+		return true;
 	}
 
 	private void initializePaging() {

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Developer Days</string>
-    <string name="action_settings">Settings</string>
+    
 
     <!-- VIEWPAGER -->
     <string name="main_viewpagerindicator_timetable">AGENDA</string>
@@ -36,5 +36,9 @@
     <string name="places_locations_hackathon">Localización del hackathon</string>
     <string name="places_locations_lunch">Cafetería / Restaurante</string>
     <string name="places_locations_parking">Aparcamientos</string>
-
+    
+    <!-- MENU -->
+	<string name="action_settings">Ajustes</string>
+	<string name="action_about">Información</string>
+	<string name="action_patro">Patrocinadores</string>
 </resources>
