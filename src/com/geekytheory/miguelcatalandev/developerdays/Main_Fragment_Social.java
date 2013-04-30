@@ -35,11 +35,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class Main_Fragment_Social extends ListFragment {
 	public ArrayList<Tweet> tweets;
 	private Social_Adapter_Tweets adapter;
+	private ProgressBar progressbar;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,11 +51,12 @@ public class Main_Fragment_Social extends ListFragment {
 		inflater = (LayoutInflater) getActivity().getSystemService(
 				Context.LAYOUT_INFLATER_SERVICE);
 
-		LinearLayout layout = (LinearLayout) inflater.inflate(
+		RelativeLayout layout = (RelativeLayout) inflater.inflate(
 				R.layout.main_fragment_social, null);
 
 		tweets = new ArrayList<Tweet>();
 		adapter = new Social_Adapter_Tweets(getActivity(), tweets);
+		
 
 		/** Setting the array adapter to the listview */
 		setListAdapter(adapter);
@@ -63,7 +67,7 @@ public class Main_Fragment_Social extends ListFragment {
 	@Override
 	public void onStart() {
 		super.onStart();
-
+		progressbar = (ProgressBar)getActivity().findViewById(R.id.social_progressbar);
 		String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
 		new DowloadTweets(getActivity(), str_url, this).execute();
 	}
@@ -81,12 +85,10 @@ public class Main_Fragment_Social extends ListFragment {
 
 	private class DowloadTweets extends AsyncTask<String, Void, Boolean> {
 
-		private ProgressDialog dialog;
 		private String str_url_tweet;
 
 		public DowloadTweets(Context c, String url,
 				Main_Fragment_Social fragment) {
-			dialog = new ProgressDialog(getActivity());
 			this.str_url_tweet = url;
 		}
 
@@ -97,8 +99,8 @@ public class Main_Fragment_Social extends ListFragment {
 
 		@Override
 		protected void onPostExecute(final Boolean success) {
-			if (dialog.isShowing()) {
-				dialog.dismiss();
+			if (progressbar.getVisibility()==View.VISIBLE) {
+				progressbar.setVisibility(View.GONE);
 			}
 			if (success) {
 				adapter.notifyDataSetChanged();
