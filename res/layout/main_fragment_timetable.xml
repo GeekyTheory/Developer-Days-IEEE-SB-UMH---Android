@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Horrible way of managing data throw an Android App, but in this case we are only working 
+with static data, so implementing a dynamic way (DataBase/Adapter/Objects) is a waste of time and effort -->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -225,7 +228,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_otp"
+                    android:id="@+id/timetable_button_otp"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -241,7 +244,7 @@
                     android:background="@color/dd_timetable_hour_brackground" />
 
                 <Button
-                    android:id="@+id/timetable_talks_opencv"
+                    android:id="@+id/timetable_button_opencv"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -275,7 +278,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_wp2"
+                    android:id="@+id/timetable_button_wp2"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -291,7 +294,7 @@
                     android:background="@color/dd_timetable_hour_brackground" />
 
                 <Button
-                    android:id="@+id/timetable_talks_arduino"
+                    android:id="@+id/timetable_button_arduino"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -365,7 +368,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_node"
+                    android:id="@+id/timetable_button_node"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -381,7 +384,7 @@
                     android:background="@color/dd_timetable_hour_brackground" />
 
                 <Button
-                    android:id="@+id/timetable_talks_money"
+                    android:id="@+id/timetable_button_money"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -415,7 +418,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_ieee"
+                    android:id="@+id/timetable_button_ieee"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center"
@@ -454,7 +457,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_lunch_2"
+                    android:id="@+id/timetable_button_lunch_2"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center"
@@ -488,7 +491,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_intelec"
+                    android:id="@+id/timetable_button_intelec"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -504,7 +507,7 @@
                     android:background="@color/dd_timetable_hour_brackground" />
 
                 <Button
-                    android:id="@+id/timetable_talks_chat"
+                    android:id="@+id/timetable_button_chat"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center_vertical"
@@ -538,7 +541,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_microsoft"
+                    android:id="@+id/timetable_button_microsoft"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center"
@@ -572,7 +575,7 @@
                     android:background="@android:color/darker_gray" />
 
                 <Button
-                    android:id="@+id/timetable_talks_closing"
+                    android:id="@+id/timetable_button_closing"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/timetable_row_height"
                     android:layout_gravity="center"

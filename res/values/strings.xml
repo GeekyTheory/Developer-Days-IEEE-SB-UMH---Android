@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Developer Days</string>
-    
 
     <!-- VIEWPAGER -->
     <string name="main_viewpagerindicator_timetable">AGENDA</string>
@@ -30,18 +29,24 @@
     <string name="timetable_talks_microsoft">Charla Microsoft</string>
     <string name="timetable_talks_closing">Acto de clausura</string>
 
+    <!-- DETAIL -->
+    <string name="detail_header_description">Descripción</string>
+    <string name="detail_header_location">Localización</string>
+    <string name="detail_header_data">Datos de la ponencia</string>
+
     <!-- PLACES -->
     <string name="places_textview_map">Maps</string>
     <string name="places_locations_talks">Localización de las charlas</string>
     <string name="places_locations_hackathon">Localización del hackathon</string>
     <string name="places_locations_lunch">Cafetería / Restaurante</string>
     <string name="places_locations_parking">Aparcamientos</string>
-    
+
     <!-- SOCIAL -->
-        <string name="social_nomedia_nointernet">No se pueden descargar Tweets</string>
-    
+    <string name="social_nomedia_nointernet">No se pueden descargar Tweets</string>
+
     <!-- MENU -->
-	<string name="action_settings">Ajustes</string>
-	<string name="action_about">Información</string>
-	<string name="action_patro">Patrocinadores</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_about">Información</string>
+    <string name="action_patro">Patrocinadores</string>
+
 </resources>
