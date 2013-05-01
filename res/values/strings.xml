@@ -37,6 +37,9 @@
     <string name="places_locations_lunch">Cafetería / Restaurante</string>
     <string name="places_locations_parking">Aparcamientos</string>
     
+    <!-- SOCIAL -->
+        <string name="social_nomedia_nointernet">No se pueden descargar Tweets</string>
+    
     <!-- MENU -->
 	<string name="action_settings">Ajustes</string>
 	<string name="action_about">Información</string>

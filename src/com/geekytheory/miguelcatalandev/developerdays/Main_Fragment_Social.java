@@ -25,6 +25,8 @@ import com.geekytheory.miguelcatalandev.developerdays.objects.Tweet;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -33,6 +35,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -53,12 +56,9 @@ public class Main_Fragment_Social extends ListFragment {
 
 		RelativeLayout layout = (RelativeLayout) inflater.inflate(
 				R.layout.main_fragment_social, null);
-
+		
 		tweets = new ArrayList<Tweet>();
 		adapter = new Social_Adapter_Tweets(getActivity(), tweets);
-		
-
-		/** Setting the array adapter to the listview */
 		setListAdapter(adapter);
 
 		return layout;
@@ -67,9 +67,13 @@ public class Main_Fragment_Social extends ListFragment {
 	@Override
 	public void onStart() {
 		super.onStart();
-		progressbar = (ProgressBar)getActivity().findViewById(R.id.social_progressbar);
-		String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
-		new DowloadTweets(getActivity(), str_url, this).execute();
+		getListView().setEmptyView(getView().findViewById(R.id.social_empty_view));
+		if(isOnline()){
+			progressbar = (ProgressBar)getActivity().findViewById(R.id.social_progressbar);
+			String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
+			new DowloadTweets(getActivity(), str_url, this).execute();
+		}
+		
 	}
 
 	@Override
@@ -169,6 +173,16 @@ public class Main_Fragment_Social extends ListFragment {
 			return builder.toString();
 		}
 
+	}
+	
+	public boolean isOnline() {
+		ConnectivityManager cm = (ConnectivityManager) getView().getContext()
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo netInfo = cm.getActiveNetworkInfo();
+		if (netInfo != null && netInfo.isConnected()) {
+			return true;
+		}
+		return false;
 	}
 
 }
