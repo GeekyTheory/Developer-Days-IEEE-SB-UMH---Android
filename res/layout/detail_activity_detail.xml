@@ -30,17 +30,26 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@+id/detail_imageview_profile"
-                android:text="Nombre Apellido"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/detail_textview_buis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/detail_textview_name"
                 android:layout_below="@+id/detail_textview_name"
-                android:text="Empresa"
                 android:textColor="@color/vpi__bright_foreground_disabled_holo_light" />
+            
+            <TextView
+                android:id="@+id/detail_textview_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/detail_textview_buis"
+                android:layout_below="@+id/detail_textview_buis"
+                android:clickable="true"
+                android:textIsSelectable="true"
+                android:textColor="@color/abs__holo_blue_light"/>
         </RelativeLayout>
 
         <TextView
@@ -51,12 +60,11 @@
             android:text="@string/detail_header_description" />
 
         <TextView
-            android:id="@+id/detail_textview_name"
+            android:id="@+id/detail_textview_des"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:text="Descripccion del evento" />
+            android:layout_marginRight="8dp" />
 
         <TextView
             style="@style/SectionHeader"
@@ -71,7 +79,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="Horario: 10 am"
             android:textStyle="bold" />
 
         <TextView
@@ -80,10 +87,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="Localizacion: Aula - edificio"
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/detail_imageview_location"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="8dp"

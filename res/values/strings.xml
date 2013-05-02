@@ -13,7 +13,9 @@
     <string name="timetable_time_last">VIERNES 17/05/2013</string>
     <string name="timetable_talks_reception">Recepción</string>
     <string name="timetable_talks_opening">Acto de apertura</string>
-    <string name="timetable_talks_tecnical">Charlas técnicas</string>
+    <string name="timetable_talks_sl">Isidro Pérez</string>
+    <string name="timetable_talks_aisoy">AISoy</string>
+    <string name="timetable_talks_yuilop">Yuilop</string>
     <string name="timetable_talks_linux">Taller Linux</string>
     <string name="timetable_talks_wp">Taller Windows Phone</string>
     <string name="timetable_talks_lunch">Comida y networking</string>
@@ -48,5 +50,130 @@
     <string name="action_settings">Ajustes</string>
     <string name="action_about">Información</string>
     <string name="action_patro">Patrocinadores</string>
+    
+    <!-- EVENT INFO -->
+    <string name="event_arduino_name">Mario Perez</string>
+    <string name="event_arduino_buis">GeekyTheory</string>
+    <string name="event_arduino_des">Descripcción</string>
+    <string name="event_arduino_loc">Aula 1 - altabix</string>
+    <string name="event_arduino_time">Jueves, 18:00 - 20:00</string>
+    <string name="event_arduino_title">Taller Arduino</string>
+    <string name="event_arduino_url">http://geekytheory.com</string>
+    
+    <string name="event_chat_name">Miguel Del Amor Herrera</string>
+    <string name="event_chat_buis">Yuilop</string>
+    <string name="event_chat_des">Descripcción</string>
+    <string name="event_chat_loc">Aula 1 - altabix</string>
+    <string name="event_chat_time">Viernes, 16:00 - 18:00</string>
+    <string name="event_chat_title">Chat punto a punto</string>
+    <string name="event_chat_url">http://yuilop.com/es/</string>
+    
+    <string name="event_ieee_name">Juan Carlos Dueñas</string>
+    <string name="event_ieee_buis">IEEE Sección España</string>
+    <string name="event_ieee_des">Descripcción</string>
+    <string name="event_ieee_loc">Aula 1 - Altabix</string>
+    <string name="event_ieee_time">Viernes, 12:00 - 14:00</string>
+    <string name="event_ieee_title">Charla IEEE Computer</string>
+    <string name="event_ieee_url">http://ieeespain.org</string>
+    
+    <string name="event_intelec_name">Intelec</string>
+    <string name="event_intelec_buis"> </string>
+    <string name="event_intelec_des">Descripcción</string>
+    <string name="event_intelec_loc">null</string>
+    <string name="event_intelec_time">Viernes, 16:00 - 18:00</string>
+    <string name="event_intelec_title">Mesa redonda</string>
+    <string name="event_intelec_url">http://intelec.es</string>
+    
+    <string name="event_linux_name">David Úbeda</string>
+    <string name="event_linux_buis">Docente UMH</string>
+    <string name="event_linux_des">Descripcción</string>
+    <string name="event_linux_loc"></string>
+    <string name="event_linux_time">Jueves, 12:00 - 14:00</string>
+    <string name="event_linux_title">Install Party</string>
+    <string name="event_linux_url"></string>
+    
+    <string name="event_microsoft_name">Microsoft Staff</string>
+    <string name="event_microsoft_buis">Microsft</string>
+    <string name="event_microsoft_des">Descripcción</string>
+    <string name="event_microsoft_loc"></string>
+    <string name="event_microsoft_time">Viernes, 18:00 - 19:00</string>
+    <string name="event_microsoft_title">Desarrollo con Microsoft</string>
+    <string name="event_microsoft_url"></string>
+    
+    <string name="event_money_name">Asun Vicente Ripoll</string>
+    <string name="event_money_buis">LCSI UMH</string>
+    <string name="event_money_des">Descripcción</string>
+    <string name="event_money_loc"></string>
+    <string name="event_money_time">Viernes, 10:00 - 12:00</string>
+    <string name="event_money_title">Monetización de Apps</string>
+    <string name="event_money_url">http://lcsi.umh.es</string>
+    
+    <string name="event_node_name">Microsoft Staff</string>
+    <string name="event_node_buis">Microsoft</string>
+    <string name="event_node_des">Descripcción</string>
+    <string name="event_node_loc"></string>
+    <string name="event_node_time">Viernes, 10:00 - 12:00</string>
+    <string name="event_node_title">Taller Node.js</string>
+    <string name="event_node_url"></string>
+    
+    <string name="event_opencv_name">Jesualdo Ros</string>
+    <string name="event_opencv_buis">GeekyTheory</string>
+    <string name="event_opencv_des">Descripcción</string>
+    <string name="event_opencv_loc"></string>
+    <string name="event_opencv_time">Jueves, 16:00 - 18:00</string>
+    <string name="event_opencv_title">Taller OpenCV</string>
+    <string name="event_opencv_url">http://geekytheory.com</string>
+    
+    <string name="event_otp_name">Manuel Rubio</string>
+    <string name="event_otp_buis">Yuilop</string>
+    <string name="event_otp_des">Descripcción</string>
+    <string name="event_otp_loc"></string>
+    <string name="event_otp_time">Jueves, 16:00 - 18:00</string>
+    <string name="event_otp_title">Erlang/OTP</string>
+    <string name="event_otp_url">http://yuilop.com/es/</string>
+    
+    <string name="event_SL_name">Isidro Pérez</string>
+    <string name="event_SL_buis">Avanza Soluciones</string>
+    <string name="event_SL_des">Descripcción</string>
+    <string name="event_SL_loc"></string>
+    <string name="event_SL_time">Jueves, 10:00</string>
+    <string name="event_SL_title">Charlas tecnicas</string>
+    <string name="event_SL_url">http://avanzaeninternet.com</string>
+    
+    <string name="event_aisoy_name">Diego Garcia</string>
+    <string name="event_aisoy_buis">AISoy Robotics</string>
+    <string name="event_aisoy_des">Descripcción</string>
+    <string name="event_aisoy_loc"></string>
+    <string name="event_aisoy_time">Jueves, 10:40</string>
+    <string name="event_aisoy_title">AISoy Robotics</string>
+    <string name="event_aisoy_url">http://aisoy.com</string>
+    
+    <string name="event_yuilop_name">Yuilop</string>
+    <string name="event_yuilop_buis">Tuilop</string>
+    <string name="event_yuilop_des">Descripcción</string>
+    <string name="event_yuilop_loc"></string>
+    <string name="event_yuilop_time">Jueves, 11:20</string>
+    <string name="event_yuilop_title">Yuilop</string>
+    <string name="event_yuilop_url">http://yuilop.com/es/</string>
+    
+    <string name="event_wp_name">Dachi Gogotchuri</string>
+    <string name="event_wp_buis">GeekyTheory</string>
+    <string name="event_wp_des">Descripcción</string>
+    <string name="event_wp_loc"></string>
+    <string name="event_wp_time">Jueves 12:00 - 14:00</string>
+    <string name="event_wp_title">Introducción a WP</string>
+    <string name="event_wp_url">http://geekytheory.com</string>
+    
+    <string name="event_wp2_name">Guillermo Bas</string>
+    <string name="event_wp2_buis">SolidQ</string>
+    <string name="event_wp2_des">Descripcción</string>
+    <string name="event_wp2_loc"></string>
+    <string name="event_wp2_time">Jueves, 18:00 - 20:00</string>
+    <string name="event_wp2_title">RSS con WP</string>
+    <string name="event_wp2_url">http://solidq.com</string>
+    
+    
+    
+    
 
 </resources>
