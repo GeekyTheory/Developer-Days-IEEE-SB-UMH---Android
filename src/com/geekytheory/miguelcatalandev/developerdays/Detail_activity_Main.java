@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.MenuItem;
 
 public class Detail_activity_Main extends SherlockActivity implements
 		OnClickListener {
@@ -21,6 +22,14 @@ public class Detail_activity_Main extends SherlockActivity implements
 		setContentView(R.layout.detail_activity_detail);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		initialize();
+	}
+	
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		if(item.getItemId()==android.R.id.home){
+			onBackPressed();
+		}
+		return super.onMenuItemSelected(featureId, item);
 	}
 
 	private void initialize() {
@@ -46,7 +55,7 @@ public class Detail_activity_Main extends SherlockActivity implements
 			time.setText("Horario: " + extras.getString("time"));
 
 			TextView loc = (TextView) findViewById(R.id.detail_textview_location);
-			loc.setText("Localizaci—n: " + extras.getString("loc"));
+			loc.setText("Localización: " + extras.getString("loc"));
 
 			ImageView profile = (ImageView) findViewById(R.id.detail_imageview_profile);
 			profile.setImageResource(extras.getInt("image",
@@ -59,9 +68,6 @@ public class Detail_activity_Main extends SherlockActivity implements
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case android.R.id.home:
-			onBackPressed();
-			break;
 		case R.id.detail_textview_url:
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 			intent.setData(Uri.parse(extras.getString("url")));

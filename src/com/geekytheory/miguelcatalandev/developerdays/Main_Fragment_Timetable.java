@@ -14,7 +14,13 @@ public class Main_Fragment_Timetable extends Fragment implements
 
 	Button button_1, button_2, button_3, button_4, button_5, button_6,
 			button_7, button_8, button_9, button_10, button_11, button_12,
-			button_13,button_14,button_15;
+			button_13, button_14, button_15;
+
+	/***
+	 * Horrible way of managing data throw an Android App, but in this case we
+	 * are only working with static data, so implementing a dynamic way
+	 * (DataBase/Adapter/Objects) is a waste of time and effort.
+	 */
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -31,8 +37,7 @@ public class Main_Fragment_Timetable extends Fragment implements
 	}
 
 	private void initialize() {
-		button_1 = (Button) getView().findViewById(
-				R.id.timetable_button_sl);
+		button_1 = (Button) getView().findViewById(R.id.timetable_button_sl);
 		button_1.setOnClickListener(this);
 
 		button_2 = (Button) getView().findViewById(R.id.timetable_button_linux);
@@ -74,11 +79,11 @@ public class Main_Fragment_Timetable extends Fragment implements
 		button_13 = (Button) getView().findViewById(
 				R.id.timetable_button_microsoft);
 		button_13.setOnClickListener(this);
-		
-		button_14 = (Button) getView().findViewById(
-				R.id.timetable_button_aisoy);
+
+		button_14 = (Button) getView()
+				.findViewById(R.id.timetable_button_aisoy);
 		button_14.setOnClickListener(this);
-		
+
 		button_15 = (Button) getView().findViewById(
 				R.id.timetable_button_yuliop);
 		button_15.setOnClickListener(this);
