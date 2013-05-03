@@ -30,6 +30,10 @@
             android:name="com.geekytheory.miguelcatalandev.developerdays.Detail_activity_Main"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.geekytheory.miguelcatalandev.developerdays.Info_activity_Main"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
