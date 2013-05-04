@@ -13,7 +13,7 @@ import com.actionbarsherlock.view.MenuItem;
 
 public class Detail_activity_Main extends SherlockActivity implements
 		OnClickListener {
-	
+
 	Bundle extras;
 
 	@Override
@@ -23,10 +23,10 @@ public class Detail_activity_Main extends SherlockActivity implements
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		initialize();
 	}
-	
+
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		if(item.getItemId()==android.R.id.home){
+		if (item.getItemId() == android.R.id.home) {
 			onBackPressed();
 		}
 		return super.onMenuItemSelected(featureId, item);

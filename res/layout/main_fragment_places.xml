@@ -1,144 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/abs__background_holo_light"
-    android:orientation="vertical" >
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/places_imageview_height_map" >
-
-        <ImageView
-            android:id="@+id/places_imageview_map"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/places_imageview_height_map"
-            android:layout_centerInParent="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/map_background" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/places_textview_map"
-            android:textSize="@dimen/places_textview_size_map"
-            android:textStyle="bold" />
-    </RelativeLayout>
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/card_shape_normal"
+        android:layout_height="match_parent"
+        android:background="@color/abs__background_holo_light"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:id="@+id/places_linearlayout_talks"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/list_selector_holo_light"
-            android:clickable="true"
-            android:orientation="horizontal"
-            android:padding="16dp" >
+            android:layout_height="@dimen/places_imageview_height_map" >
 
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_marker_red" />
+                android:id="@+id/places_imageview_map"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/places_imageview_height_map"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map_background" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:text="@string/places_locations_talks"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="@color/dd_timetable_hour_brackground" />
+                android:layout_centerInParent="true"
+                android:text="@string/places_textview_map"
+                android:textSize="@dimen/places_textview_size_map"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/places_linearlayout_hackathon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/list_selector_holo_light"
-            android:clickable="true"
-            android:orientation="horizontal"
-            android:padding="16dp" >
+            android:layout_margin="8dp"
+            android:background="@drawable/card_shape_normal"
+            android:orientation="vertical" >
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_marker_green" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/places_linearlayout_talks"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:text="@string/places_locations_hackathon"
-                android:textSize="18sp" />
-        </LinearLayout>
+                android:background="@drawable/list_selector_holo_light"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="16dp" >
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="@color/dd_timetable_hour_brackground" />
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_marker_red" />
 
-        <LinearLayout
-            android:id="@+id/places_linearlayout_lunch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/list_selector_holo_light"
-            android:clickable="true"
-            android:orientation="horizontal"
-            android:padding="16dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/places_locations_talks"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_marker_blue" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/places_linearlayout_hackathon"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:text="@string/places_locations_lunch"
-                android:textSize="18sp" />
-        </LinearLayout>
+                android:background="@drawable/list_selector_holo_light"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="16dp" >
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="@color/dd_timetable_hour_brackground" />
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_marker_green" />
 
-        <LinearLayout
-            android:id="@+id/places_linearlayout_parking"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/list_selector_holo_light"
-            android:clickable="true"
-            android:orientation="horizontal"
-            android:padding="16dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/places_locations_hackathon"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_marker_orange" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/places_linearlayout_lunch"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:text="@string/places_locations_parking"
-                android:textSize="18sp" />
+                android:background="@drawable/list_selector_holo_light"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="16dp" >
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_marker_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/places_locations_lunch"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/dd_timetable_hour_brackground" />
+
+            <LinearLayout
+                android:id="@+id/places_linearlayout_parking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_selector_holo_light"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="16dp" >
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_marker_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/places_locations_parking"
+                    android:textSize="18sp" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
