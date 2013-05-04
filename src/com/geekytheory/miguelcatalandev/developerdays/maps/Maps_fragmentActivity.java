@@ -49,10 +49,10 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 
 		prepareActionBar();
 
+		initialize();
+
 		map = ((SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map)).getMap();
-
-		drawMarkers();
 
 		map.setMapType(2);
 		map.setOnInfoWindowClickListener(this);
@@ -63,11 +63,64 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 
 	}
 
+	private void initialize() {
+		int type = 0;
+		try {
+			type = getIntent().getExtras().getInt("type", 0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		switch (type) {
+		case 0:
+			drawAllMarkers();
+			break;
+		case 1:
+			drawTalksMarkers();
+			break;
+		case 2:
+			drawHackathonMarkers();
+			break;
+		case 3:
+			drawLunchMarkers();
+			break;
+		case 4:
+			drawParkingMarkers();
+			break;
+		default:
+			drawAllMarkers();
+			break;
+		}
+	}
+
 	private void prepareActionBar() {
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
-	private void drawMarkers() {
+	private void drawAllMarkers() {
+		drawHackathonMarkers();
+		drawLunchMarkers();
+		drawParkingMarkers();
+		drawTalksMarkers();
+	}
+
+	private void drawLunchMarkers() {
+
+		lunch_altabix = map.addMarker(new MarkerOptions()
+				.position(LUNCH_ALTABIX)
+				.title("Cafeter’a Altabix")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_blue)));
+
+		lunch_rectorado = map.addMarker(new MarkerOptions()
+				.position(LUNCH_RECTORADO)
+				.title("Restaurante Rectorado")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_blue)));
+
+	}
+
+	private void drawParkingMarkers() {
 
 		parking_altabix = map.addMarker(new MarkerOptions()
 				.position(PARKING_ALTABIX)
@@ -88,6 +141,28 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 				.icon(BitmapDescriptorFactory
 						.fromResource(R.drawable.ic_marker_orange)));
 
+	}
+
+	private void drawHackathonMarkers() {
+
+		parking_rectorado = map.addMarker(new MarkerOptions()
+				.position(PARKING_RECTORADO)
+				.title("Aparcamiento (Rectorado)")
+				.snippet("Hackathon")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_orange)));
+
+		building_quorumv = map.addMarker(new MarkerOptions()
+				.position(BUILDING_QUORUMV)
+				.title("Edificio Quorum V")
+				.snippet("Hackathon")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_green)));
+
+	}
+
+	private void drawTalksMarkers() {
+
 		building_altabix = map.addMarker(new MarkerOptions()
 				.position(BUILDING_ALTABIX)
 				.title("Edificio Altabix")
@@ -101,25 +176,6 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 				.snippet("Charlas y talleres")
 				.icon(BitmapDescriptorFactory
 						.fromResource(R.drawable.ic_marker_red)));
-
-		building_quorumv = map.addMarker(new MarkerOptions()
-				.position(BUILDING_QUORUMV)
-				.title("Edificio Quorum V")
-				.snippet("Hackathon")
-				.icon(BitmapDescriptorFactory
-						.fromResource(R.drawable.ic_marker_green)));
-
-		lunch_altabix = map.addMarker(new MarkerOptions()
-				.position(LUNCH_ALTABIX)
-				.title("Cafeter’a Altabix")
-				.icon(BitmapDescriptorFactory
-						.fromResource(R.drawable.ic_marker_blue)));
-
-		lunch_rectorado = map.addMarker(new MarkerOptions()
-				.position(LUNCH_RECTORADO)
-				.title("Restaurante Rectorado")
-				.icon(BitmapDescriptorFactory
-						.fromResource(R.drawable.ic_marker_blue)));
 
 	}
 
