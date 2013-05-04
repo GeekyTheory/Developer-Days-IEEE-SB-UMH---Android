@@ -1,13 +1,15 @@
 package com.geekytheory.miguelcatalandev.developerdays;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.geekytheory.miguelcatalandev.developerdays.adapters.Main_Adapter_ViewPager;
 import com.viewpagerindicator.TabPageIndicator;
-
-import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 
 public class Main_Activity_Main extends SherlockFragmentActivity {
 
@@ -19,12 +21,24 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 		setContentView(R.layout.main_activity_main);
 		initializePaging();
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getSupportMenuInflater();
 		inflater.inflate(R.menu.main_activity_main, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_about:
+			startActivity(new Intent(this, Info_activity_Main.class));
+			break;
+		case R.id.action_patro:
+			break;
+		}
+		return super.onMenuItemSelected(featureId, item);
 	}
 
 	private void initializePaging() {

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:src="@drawable/web_hi_res" />
+
+    <TextView
+        android:id="@+id/info_texview_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Version 1.1"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/SectionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desarrollado por:" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/info_imageview_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/miguel_catalan_geekytheory" />
+
+        <TextView
+            android:id="@+id/info_textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/info_imageview_profile"
+            android:text="Miguel Catalan Bañuls"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_textview_buis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/info_textview_name"
+            android:layout_below="@+id/info_textview_name"
+            android:text="GeekyTheory"
+            android:textColor="@color/vpi__bright_foreground_disabled_holo_light" />
+
+        <TextView
+            android:id="@+id/info_textview_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/info_textview_buis"
+            android:layout_below="@+id/info_textview_buis"
+            android:clickable="true"
+            android:text="miguel@geekytheory.com"
+            android:textColor="@color/abs__holo_blue_light"
+            android:textIsSelectable="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/info_imageview_geeky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/geekytheory" />
+
+</LinearLayout>

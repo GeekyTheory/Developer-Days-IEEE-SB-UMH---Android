@@ -21,8 +21,10 @@ import org.json.JSONObject;
 
 import com.geekytheory.miguelcatalandev.developerdays.adapters.Social_Adapter_Tweets;
 import com.geekytheory.miguelcatalandev.developerdays.objects.Tweet;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -35,17 +37,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class Main_Fragment_Social extends ListFragment {
+public class Main_Fragment_Social extends ListFragment implements OnRefreshListener<ListView>{
 	public ArrayList<Tweet> tweets;
 	private Social_Adapter_Tweets adapter;
-	private ProgressBar progressbar;
+	private final static String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
+	private PullToRefreshListView listView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,29 +57,44 @@ public class Main_Fragment_Social extends ListFragment {
 
 		RelativeLayout layout = (RelativeLayout) inflater.inflate(
 				R.layout.main_fragment_social, null);
-		
+
 		tweets = new ArrayList<Tweet>();
 		adapter = new Social_Adapter_Tweets(getActivity(), tweets);
-		setListAdapter(adapter);
+
+		
+		// setListAdapter(adapter);
 
 		return layout;
+	}
+	
+	@Override
+	public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+		if (isOnline()) {
+			new DowloadTweets(getActivity(), str_url, this).execute();
+		}else{
+			listView.onRefreshComplete();
+		}
 	}
 
 	@Override
 	public void onStart() {
+		listView = (PullToRefreshListView) getView().findViewById(
+				R.id.listica);
+		listView.setAdapter(adapter);
+		listView.setOnRefreshListener(this);
+		
 		super.onStart();
-		getListView().setEmptyView(getView().findViewById(R.id.social_empty_view));
-		if(isOnline()){
-			progressbar = (ProgressBar)getActivity().findViewById(R.id.social_progressbar);
-			String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
+		listView.setEmptyView(
+				getActivity().findViewById(R.id.social_empty_view));
+		if (isOnline()) {
 			new DowloadTweets(getActivity(), str_url, this).execute();
 		}
-		
+
 	}
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		final Tweet tweet = tweets.get(position);
+		final Tweet tweet = tweets.get(position-1);
 		String url = "https://twitter.com/" + tweet.getUserNick() + "/status/"
 				+ tweet.getTweetUrl();
 
@@ -103,11 +119,9 @@ public class Main_Fragment_Social extends ListFragment {
 
 		@Override
 		protected void onPostExecute(final Boolean success) {
-			if (progressbar.getVisibility()==View.VISIBLE) {
-				progressbar.setVisibility(View.GONE);
-			}
 			if (success) {
 				adapter.notifyDataSetChanged();
+				listView.onRefreshComplete();
 			} else {
 				Toast.makeText(getActivity(), "Error en la lectura",
 						Toast.LENGTH_LONG).show();
@@ -174,7 +188,7 @@ public class Main_Fragment_Social extends ListFragment {
 		}
 
 	}
-	
+
 	public boolean isOnline() {
 		ConnectivityManager cm = (ConnectivityManager) getView().getContext()
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
