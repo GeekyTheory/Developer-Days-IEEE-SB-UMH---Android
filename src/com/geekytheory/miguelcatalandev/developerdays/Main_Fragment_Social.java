@@ -32,6 +32,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -42,11 +43,14 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class Main_Fragment_Social extends ListFragment implements OnRefreshListener<ListView>{
+public class Main_Fragment_Social extends ListFragment implements
+		OnRefreshListener<ListView> {
 	public ArrayList<Tweet> tweets;
 	private Social_Adapter_Tweets adapter;
 	private final static String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
 	private PullToRefreshListView listView;
+	DateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy kk:mm:ss Z",
+			Locale.ENGLISH);
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,31 +65,28 @@ public class Main_Fragment_Social extends ListFragment implements OnRefreshListe
 		tweets = new ArrayList<Tweet>();
 		adapter = new Social_Adapter_Tweets(getActivity(), tweets);
 
-		
 		// setListAdapter(adapter);
 
 		return layout;
 	}
-	
+
 	@Override
 	public void onRefresh(PullToRefreshBase<ListView> refreshView) {
 		if (isOnline()) {
 			new DowloadTweets(getActivity(), str_url, this).execute();
-		}else{
+		} else {
 			listView.onRefreshComplete();
 		}
 	}
 
 	@Override
 	public void onStart() {
-		listView = (PullToRefreshListView) getView().findViewById(
-				R.id.listica);
+		super.onStart();
+		listView = (PullToRefreshListView) getView().findViewById(R.id.listica);
 		listView.setAdapter(adapter);
 		listView.setOnRefreshListener(this);
-		
-		super.onStart();
-		listView.setEmptyView(
-				getActivity().findViewById(R.id.social_empty_view));
+		listView.setEmptyView(getActivity()
+				.findViewById(R.id.social_empty_view));
 		if (isOnline()) {
 			new DowloadTweets(getActivity(), str_url, this).execute();
 		}
@@ -93,8 +94,23 @@ public class Main_Fragment_Social extends ListFragment implements OnRefreshListe
 	}
 
 	@Override
+	public void onResume() {
+		super.onResume();
+		getActivity().runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+
+				listView.onRefreshComplete();
+				adapter.notifyDataSetChanged();
+
+			}
+		});
+	}
+
+	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		final Tweet tweet = tweets.get(position-1);
+		final Tweet tweet = tweets.get(position);
 		String url = "https://twitter.com/" + tweet.getUserNick() + "/status/"
 				+ tweet.getTweetUrl();
 
@@ -112,16 +128,24 @@ public class Main_Fragment_Social extends ListFragment implements OnRefreshListe
 			this.str_url_tweet = url;
 		}
 
-		protected void onPreExecute() {
-			// this.dialog.setMessage("Obteniendo Rutas");
-			// this.dialog.show();
-		}
-
 		@Override
 		protected void onPostExecute(final Boolean success) {
 			if (success) {
-				adapter.notifyDataSetChanged();
-				listView.onRefreshComplete();
+				try {
+					getActivity().runOnUiThread(new Runnable() {
+
+						@Override
+						public void run() {
+
+							listView.onRefreshComplete();
+							adapter.notifyDataSetChanged();
+
+						}
+					});
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
 			} else {
 				Toast.makeText(getActivity(), "Error en la lectura",
 						Toast.LENGTH_LONG).show();
@@ -144,8 +168,6 @@ public class Main_Fragment_Social extends ListFragment implements OnRefreshListe
 					tweet.setTweet(itemjson.getString("text").replace("&gt;",
 							""));
 					tweet.setUserNick(itemjson.getString("from_user"));
-					DateFormat formatter = new SimpleDateFormat(
-							"EEE, dd MMM yyyy kk:mm:ss Z", Locale.ENGLISH);
 					tweet.setTweetTime(formatter.parse(""
 							+ itemjson.getString("created_at")));
 					tweet.setUserImageUrl(itemjson

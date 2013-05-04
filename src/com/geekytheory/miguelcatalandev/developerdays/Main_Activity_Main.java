@@ -35,8 +35,6 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 		case R.id.action_about:
 			startActivity(new Intent(this, Info_activity_Main.class));
 			break;
-		case R.id.action_patro:
-			break;
 		}
 		return super.onMenuItemSelected(featureId, item);
 	}

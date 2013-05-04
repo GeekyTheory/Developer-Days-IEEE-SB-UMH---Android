@@ -40,7 +40,7 @@
                 android:layout_alignLeft="@+id/detail_textview_name"
                 android:layout_below="@+id/detail_textview_name"
                 android:textColor="@color/vpi__bright_foreground_disabled_holo_light" />
-            
+
             <TextView
                 android:id="@+id/detail_textview_url"
                 android:layout_width="wrap_content"
@@ -48,8 +48,8 @@
                 android:layout_alignLeft="@+id/detail_textview_buis"
                 android:layout_below="@+id/detail_textview_buis"
                 android:clickable="true"
-                android:textIsSelectable="true"
-                android:textColor="@color/abs__holo_blue_light"/>
+                android:textColor="@color/abs__holo_blue_light"
+                android:textIsSelectable="true" />
         </RelativeLayout>
 
         <TextView
@@ -89,13 +89,27 @@
             android:layout_marginRight="8dp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/detail_imageview_location"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_margin="8dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/map_background" />
+            android:layout_height="wrap_content" >
+
+            
+
+            <ImageView
+                android:id="@+id/detail_imageview_location"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map_background" />
+            
+            <TextView
+                android:text="Ver localización"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold" />
+        </RelativeLayout>
     </LinearLayout>
 
 </ScrollView>

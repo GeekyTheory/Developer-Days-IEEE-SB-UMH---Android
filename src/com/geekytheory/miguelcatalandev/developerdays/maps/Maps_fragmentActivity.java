@@ -49,8 +49,6 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 
 		prepareActionBar();
 
-		initialize();
-
 		map = ((SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map)).getMap();
 
@@ -58,8 +56,10 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 		map.setOnInfoWindowClickListener(this);
 
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(38.276988,
-				-0.688751), 15));
+				-0.688751), 14));
 		map.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
+
+		initialize();
 
 	}
 
@@ -74,27 +74,73 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 		switch (type) {
 		case 0:
 			drawAllMarkers();
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
+					38.276988, -0.688751), 14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
 			break;
 		case 1:
 			drawTalksMarkers();
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
+					38.276988, -0.688751), 14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(16), 2000, null);
 			break;
 		case 2:
 			drawHackathonMarkers();
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(BUILDING_QUORUMV,
+					14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(16), 2000, null);
+			building_quorumv.showInfoWindow();
 			break;
 		case 3:
 			drawLunchMarkers();
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
+					38.276988, -0.688751), 14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
+			lunch_altabix.showInfoWindow();
 			break;
 		case 4:
 			drawParkingMarkers();
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(
+					38.276988, -0.688751), 14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
 			break;
-		default:
-			drawAllMarkers();
+		case 5:
+			drawAltabixMarker();
+			map.moveCamera(CameraUpdateFactory.newLatLngZoom(BUILDING_ALTABIX,
+					14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(17), 2000, null);
+			building_altabix.showInfoWindow();
+			break;
+		case 6:
+			drawAltetMarker();
+			map.moveCamera(CameraUpdateFactory
+					.newLatLngZoom(BUILDING_ALTET, 14));
+			map.animateCamera(CameraUpdateFactory.zoomTo(17), 2000, null);
+			building_altet.showInfoWindow();
 			break;
 		}
 	}
 
 	private void prepareActionBar() {
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+	}
+
+	private void drawAltabixMarker() {
+		building_altabix = map.addMarker(new MarkerOptions()
+				.position(BUILDING_ALTABIX)
+				.title("Edificio Altabix")
+				.snippet("Charlas y talleres")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_red)));
+	}
+
+	private void drawAltetMarker() {
+		building_altet = map.addMarker(new MarkerOptions()
+				.position(BUILDING_ALTET)
+				.title("Edificio Altet")
+				.snippet("Charlas y talleres")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_red)));
 	}
 
 	private void drawAllMarkers() {
@@ -145,19 +191,19 @@ public class Maps_fragmentActivity extends SherlockFragmentActivity implements
 
 	private void drawHackathonMarkers() {
 
-		parking_rectorado = map.addMarker(new MarkerOptions()
-				.position(PARKING_RECTORADO)
-				.title("Aparcamiento (Rectorado)")
-				.snippet("Hackathon")
-				.icon(BitmapDescriptorFactory
-						.fromResource(R.drawable.ic_marker_orange)));
-
 		building_quorumv = map.addMarker(new MarkerOptions()
 				.position(BUILDING_QUORUMV)
 				.title("Edificio Quorum V")
 				.snippet("Hackathon")
 				.icon(BitmapDescriptorFactory
 						.fromResource(R.drawable.ic_marker_green)));
+
+		parking_rectorado = map.addMarker(new MarkerOptions()
+				.position(PARKING_RECTORADO)
+				.title("Aparcamiento (Rectorado)")
+				.snippet("Hackathon")
+				.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.ic_marker_orange)));
 
 	}
 

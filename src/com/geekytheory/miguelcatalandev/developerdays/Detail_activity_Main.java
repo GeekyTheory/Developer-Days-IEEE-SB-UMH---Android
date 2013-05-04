@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.geekytheory.miguelcatalandev.developerdays.maps.Maps_fragmentActivity;
 
 public class Detail_activity_Main extends SherlockActivity implements
 		OnClickListener {
@@ -55,12 +56,13 @@ public class Detail_activity_Main extends SherlockActivity implements
 			time.setText("Horario: " + extras.getString("time"));
 
 			TextView loc = (TextView) findViewById(R.id.detail_textview_location);
-			loc.setText("Localización: " + extras.getString("loc"));
+			loc.setText("Localizaci—n: " + extras.getString("loc"));
 
 			ImageView profile = (ImageView) findViewById(R.id.detail_imageview_profile);
 			profile.setImageResource(extras.getInt("image",
 					R.drawable.no_photo_circle));
-
+			ImageView map = (ImageView) findViewById(R.id.detail_imageview_location);
+			map.setOnClickListener(this);
 		}
 
 	}
@@ -74,6 +76,15 @@ public class Detail_activity_Main extends SherlockActivity implements
 			startActivity(intent);
 			break;
 		case R.id.detail_imageview_location:
+			Intent intent_map = new Intent(getBaseContext(),
+					Maps_fragmentActivity.class);
+			if(extras.getString("title").equals("Introducci—n a WP")){
+				intent_map.putExtra("type", 6);
+			}else{
+				intent_map.putExtra("type", 5);
+			}
+			
+			startActivity(intent_map);
 			break;
 		}
 

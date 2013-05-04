@@ -55,10 +55,14 @@
     <style name="ListViewdeveloperdays" parent="android:Widget.ListView">
         <item name="android:listSelector">@drawable/list_selector_holo_light</item>
         <item name="android:divider">#00000000</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:cacheColorHint">#00000000</item>
     </style>
 
     <style name="ListViewdeveloperdays.White" parent="android:Widget.ListView.White">
         <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:cacheColorHint">#00000000</item>
     </style>
 
     <style name="SpinnerItemdeveloperdays" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
@@ -66,7 +70,7 @@
     </style>
 
     <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
-        <item name="android:background">@drawable/tab_indicator_ab_actionbar_developerdays</item>
+        <item name="android:background">@drawable/tab_indicator_ab_actionbar_developerdays_white</item>
         <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
         <item name="android:textColor">@color/dd_tabindicator_text</item>
         <item name="android:padding">0dp</item>
