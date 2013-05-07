@@ -85,7 +85,7 @@ public class Social_Adapter_Tweets extends ArrayAdapter<Object> {
 				/ MILLSECS_PER_MIN;
 		if (diferenceDate > (60 * 24)) {
 			diferenceString = "" + tweetDate.getDate()
-					+ getMonth(tweetDate.getMonth()); 
+					+ getMonth(tweetDate.getMonth());
 		} else if (diferenceDate >= 60) {
 			diferenceString = diferenceDate / 60 + "h";
 		} else if (diferenceDate > 0) {
@@ -95,11 +95,6 @@ public class Social_Adapter_Tweets extends ArrayAdapter<Object> {
 	}
 
 	private String getMonth(int month_int) {
-		/***
-		 * Horrible way of managing data throw an Android App, but in this case
-		 * we are only working with static data, so implementing a dynamic way
-		 * (DataBase/Adapter/Objects) is a waste of time and effort
-		 */
 		switch (month_int) {
 		case 0:
 			return "ene";

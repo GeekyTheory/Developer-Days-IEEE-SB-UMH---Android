@@ -4,10 +4,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.X509TrustManager;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -32,19 +41,18 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class Main_Fragment_Social extends ListFragment implements
 		OnRefreshListener<ListView> {
+
 	public ArrayList<Tweet> tweets;
 	private Social_Adapter_Tweets adapter;
 	private final static String str_url = "http://search.twitter.com/search.json?rpp=50&q=%23DDIEEEUMH";
@@ -64,9 +72,6 @@ public class Main_Fragment_Social extends ListFragment implements
 
 		tweets = new ArrayList<Tweet>();
 		adapter = new Social_Adapter_Tweets(getActivity(), tweets);
-
-		// setListAdapter(adapter);
-
 		return layout;
 	}
 
@@ -82,6 +87,7 @@ public class Main_Fragment_Social extends ListFragment implements
 	@Override
 	public void onStart() {
 		super.onStart();
+
 		listView = (PullToRefreshListView) getView().findViewById(R.id.listica);
 		listView.setAdapter(adapter);
 		listView.setOnRefreshListener(this);
@@ -181,8 +187,44 @@ public class Main_Fragment_Social extends ListFragment implements
 			return true;
 		}
 
+		private void trustEveryone() {
+			try {
+				HttpsURLConnection
+						.setDefaultHostnameVerifier(new HostnameVerifier() {
+
+							@Override
+							public boolean verify(String hostname,
+									SSLSession session) {
+								return true;
+							}
+						});
+				SSLContext context = SSLContext.getInstance("TLS");
+				context.init(null,
+						new X509TrustManager[] { new X509TrustManager() {
+							public void checkClientTrusted(
+									X509Certificate[] chain, String authType)
+									throws CertificateException {
+							}
+
+							public void checkServerTrusted(
+									X509Certificate[] chain, String authType)
+									throws CertificateException {
+							}
+
+							public X509Certificate[] getAcceptedIssuers() {
+								return new X509Certificate[0];
+							}
+						} }, new SecureRandom());
+				HttpsURLConnection.setDefaultSSLSocketFactory(context
+						.getSocketFactory());
+			} catch (Exception e) { // should never happen
+				e.printStackTrace();
+			}
+		}
+
 		private String readTwitterFeed(String url) {
 			StringBuilder builder = new StringBuilder();
+			trustEveryone();
 			HttpClient client = new DefaultHttpClient();
 			HttpGet httpGet = new HttpGet(url);
 			try {

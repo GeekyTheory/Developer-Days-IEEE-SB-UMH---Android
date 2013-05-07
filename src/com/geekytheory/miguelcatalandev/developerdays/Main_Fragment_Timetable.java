@@ -12,15 +12,15 @@ import android.widget.Button;
 public class Main_Fragment_Timetable extends Fragment implements
 		OnClickListener {
 
-	Button button_1, button_2, button_3, button_4, button_5, button_6,
-			button_7, button_8, button_9, button_10, button_11, button_12,
-			button_13, button_14, button_15;
-
 	/***
 	 * Horrible way of managing data throw an Android App, but in this case we
 	 * are only working with static data, so implementing a dynamic way
 	 * (DataBase/Adapter/Objects) is a waste of time and effort.
 	 */
+
+	Button button_1, button_2, button_3, button_4, button_5, button_6,
+			button_7, button_8, button_9, button_10, button_11, button_12,
+			button_13, button_14, button_15;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -34,6 +34,11 @@ public class Main_Fragment_Timetable extends Fragment implements
 		View view = inflater.inflate(R.layout.main_fragment_timetable,
 				container, false);
 		return view;
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
 	}
 
 	private void initialize() {
@@ -239,5 +244,4 @@ public class Main_Fragment_Timetable extends Fragment implements
 		}
 		startActivity(intent);
 	}
-
 }
