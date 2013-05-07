@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.google.analytics.tracking.android.EasyTracker;
 
 public class Info_activity_Main extends SherlockActivity implements
 		OnClickListener {
@@ -21,6 +22,19 @@ public class Info_activity_Main extends SherlockActivity implements
 		setContentView(R.layout.info_activity);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		initialize();
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+		EasyTracker.getInstance().activityStart(this);
+
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+		EasyTracker.getInstance().activityStop(this);
 	}
 
 	@Override

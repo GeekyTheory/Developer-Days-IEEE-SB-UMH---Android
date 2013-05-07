@@ -11,11 +11,15 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.geekytheory.miguelcatalandev.developerdays.maps.Maps_fragmentActivity;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 
 public class Detail_activity_Main extends SherlockActivity implements
 		OnClickListener {
 
 	Bundle extras;
+	private int result;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,19 @@ public class Detail_activity_Main extends SherlockActivity implements
 			onBackPressed();
 		}
 		return super.onMenuItemSelected(featureId, item);
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+		EasyTracker.getInstance().activityStart(this);
+
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+		EasyTracker.getInstance().activityStop(this);
 	}
 
 	private void initialize() {
@@ -69,23 +86,29 @@ public class Detail_activity_Main extends SherlockActivity implements
 
 	@Override
 	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.detail_textview_url:
-			Intent intent = new Intent(Intent.ACTION_VIEW);
-			intent.setData(Uri.parse(extras.getString("url")));
-			startActivity(intent);
-			break;
-		case R.id.detail_imageview_location:
-			Intent intent_map = new Intent(getBaseContext(),
-					Maps_fragmentActivity.class);
-			if(extras.getString("title").equals("Introducci—n a WP")){
-				intent_map.putExtra("type", 6);
-			}else{
-				intent_map.putExtra("type", 5);
+
+		if (result == ConnectionResult.SUCCESS) {
+			switch (v.getId()) {
+			case R.id.detail_textview_url:
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse(extras.getString("url")));
+				startActivity(intent);
+				break;
+			case R.id.detail_imageview_location:
+				Intent intent_map = new Intent(getBaseContext(),
+						Maps_fragmentActivity.class);
+				if (extras.getString("title").equals("Introducci—n a WP")) {
+					intent_map.putExtra("type", 6);
+				} else {
+					intent_map.putExtra("type", 5);
+				}
+
+				startActivity(intent_map);
+				break;
 			}
-			
-			startActivity(intent_map);
-			break;
+		} else {
+			GooglePlayServicesUtil.getErrorDialog(result,
+					Detail_activity_Main.this, 32).show();
 		}
 
 	}
