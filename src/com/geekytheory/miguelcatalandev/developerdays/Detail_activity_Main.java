@@ -97,7 +97,7 @@ public class Detail_activity_Main extends SherlockActivity implements
 			case R.id.detail_imageview_location:
 				Intent intent_map = new Intent(getBaseContext(),
 						Maps_fragmentActivity.class);
-				if (extras.getString("title").equals("Introducci—n a WP")) {
+				if (extras.getString("title").equals("Install Party")) {
 					intent_map.putExtra("type", 6);
 				} else {
 					intent_map.putExtra("type", 5);

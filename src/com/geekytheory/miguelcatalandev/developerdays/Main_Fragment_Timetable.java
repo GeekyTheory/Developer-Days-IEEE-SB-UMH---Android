@@ -20,7 +20,7 @@ public class Main_Fragment_Timetable extends Fragment implements
 
 	Button button_1, button_2, button_3, button_4, button_5, button_6,
 			button_7, button_8, button_9, button_10, button_11, button_12,
-			button_13, button_14, button_15;
+			button_13, button_14, button_15,button_16;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -92,6 +92,10 @@ public class Main_Fragment_Timetable extends Fragment implements
 		button_15 = (Button) getView().findViewById(
 				R.id.timetable_button_yuliop);
 		button_15.setOnClickListener(this);
+		
+		button_16 = (Button) getView().findViewById(
+				R.id.timetable_button_arduino2);
+		button_16.setOnClickListener(this);
 	}
 
 	@Override
@@ -104,6 +108,16 @@ public class Main_Fragment_Timetable extends Fragment implements
 			intent.putExtra("buis", getString(R.string.event_arduino_buis));
 			intent.putExtra("des", getString(R.string.event_arduino_des));
 			intent.putExtra("loc", getString(R.string.event_arduino_loc));
+			intent.putExtra("time", getString(R.string.event_arduino_time));
+			intent.putExtra("title", getString(R.string.event_arduino_title));
+			intent.putExtra("url", getString(R.string.event_arduino_url));
+			break;
+		case R.id.timetable_button_arduino2:
+			intent.putExtra("name", getString(R.string.event_arduino_name));
+			intent.putExtra("image", R.drawable.mario_perez_geekytheory);
+			intent.putExtra("buis", getString(R.string.event_arduino_buis));
+			intent.putExtra("des", getString(R.string.event_arduino_des));
+			intent.putExtra("loc", getString(R.string.event_arduino_loc2));
 			intent.putExtra("time", getString(R.string.event_arduino_time));
 			intent.putExtra("title", getString(R.string.event_arduino_title));
 			intent.putExtra("url", getString(R.string.event_arduino_url));

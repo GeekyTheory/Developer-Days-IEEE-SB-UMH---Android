@@ -539,6 +539,22 @@ with static data, so implementing a dynamic way (DataBase/Adapter/Objects) is a 
                     android:background="@drawable/list_selector_holo_light"
                     android:padding="0dp"
                     android:text="@string/timetable_talks_intelec" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/dd_timetable_hour_brackground" />
+
+                <Button
+                    android:id="@+id/timetable_button_arduino2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/timetable_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector_holo_light"
+                    android:padding="0dp"
+                    android:text="@string/timetable_talks_arduino" />
 
                 <View
                     android:layout_width="1dp"

@@ -116,7 +116,7 @@ public class Main_Fragment_Social extends ListFragment implements
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		final Tweet tweet = tweets.get(position);
+		final Tweet tweet = tweets.get(position-1);
 		String url = "https://twitter.com/" + tweet.getUserNick() + "/status/"
 				+ tweet.getTweetUrl();
 
