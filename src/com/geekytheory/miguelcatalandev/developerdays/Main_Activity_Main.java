@@ -27,7 +27,29 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity_main);
-		initializePaging();
+		boolean isResponsive = (findViewById(R.id.main_responsive_main) != null);
+		if (isResponsive) {
+			getSupportFragmentManager()
+					.beginTransaction()
+					.replace(R.id.main_responsive_fragment_places,
+							new Main_Fragment_Places()).addToBackStack(null)
+					.commit();
+
+			getSupportFragmentManager()
+					.beginTransaction()
+					.replace(R.id.main_responsive_fragment_timetable,
+							new Main_Fragment_Timetable()).addToBackStack(null)
+					.commit();
+
+			getSupportFragmentManager()
+					.beginTransaction()
+					.replace(R.id.main_responsive_fragment_social,
+							new Main_Fragment_Social()).addToBackStack(null)
+					.commit();
+		} else {
+			initializePaging();
+		}
+
 	}
 
 	@Override
@@ -113,5 +135,10 @@ public class Main_Activity_Main extends SherlockFragmentActivity {
 
 		TabPageIndicator mTabIndicator = (TabPageIndicator) findViewById(R.id.main_indicator);
 		mTabIndicator.setViewPager(mViewPager);
+	}
+
+	@Override
+	public void onBackPressed() {
+		finish();
 	}
 }

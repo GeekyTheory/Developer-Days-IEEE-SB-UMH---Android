@@ -3,14 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/listica"
-        style="@style/ListViewdeveloperdays"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true" >
-    </com.handmark.pulltorefresh.library.PullToRefreshListView>
-
     <RelativeLayout
         android:id="@+id/social_empty_view"
         android:layout_width="match_parent"
@@ -32,5 +24,20 @@
             android:text="@string/social_nomedia_nointernet"
             android:textColor="@color/vpi__bright_foreground_disabled_holo_light" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/abs__background_holo_light"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listica"
+        style="@style/ListViewdeveloperdays"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
 
 </RelativeLayout>

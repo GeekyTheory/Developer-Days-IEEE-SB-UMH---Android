@@ -5,14 +5,14 @@
 
     <!-- VIEWPAGER -->
     <string name="main_viewpagerindicator_timetable">AGENDA</string>
-    <string name="main_viewpagerindicator_places">EXPLORE</string>
-    <string name="main_viewpagerindicator_social">STREAM</string>
+    <string name="main_viewpagerindicator_places">EXPLORA</string>
+    <string name="main_viewpagerindicator_social">SOCIAL</string>
 
     <!-- TIMETABLE -->
-    <string name="timetable_time_first">THURSDAY 16/05/2013</string>
-    <string name="timetable_time_last">FRYDAY 17/05/2013</string>
-    <string name="timetable_talks_reception">Check-In</string>
-    <string name="timetable_talks_opening">Opening</string>
+    <string name="timetable_time_first">JUEVES 16/05/2013</string>
+    <string name="timetable_time_last">VIERNES 17/05/2013</string>
+    <string name="timetable_talks_reception">Recepción</string>
+    <string name="timetable_talks_opening">Acto de apertura</string>
     <string name="timetable_talks_sl">Isidro Pérez</string>
     <string name="timetable_talks_aisoy">AISoy</string>
     <string name="timetable_talks_yuilop">Yuilop</string>
@@ -25,36 +25,36 @@
     <string name="timetable_talks_arduino">Taller Arduino</string>
     <string name="timetable_talks_node">Taller Node.js</string>
     <string name="timetable_talks_money">Taller Monetización</string>
-    <string name="timetable_talks_ieee">Juan Carlos Dueñas Talk</string>
-    <string name="timetable_talks_intelec">INTELEC Talk</string>
-    <string name="timetable_talks_chat">Node to node Talk</string>
-    <string name="timetable_talks_microsoft">Microsoft Talk</string>
-    <string name="timetable_talks_closing">Closing</string>
+    <string name="timetable_talks_ieee">Charla Juan Carlos Dueñas</string>
+    <string name="timetable_talks_intelec">Charla INTELEC</string>
+    <string name="timetable_talks_chat">Chat punto a punto</string>
+    <string name="timetable_talks_microsoft">Charla Microsoft</string>
+    <string name="timetable_talks_closing">Acto de clausura</string>
 
     <!-- DETAIL -->
-    <string name="detail_header_description">Info</string>
-    <string name="detail_header_location">Location</string>
-    <string name="detail_header_data">Talk details</string>
+    <string name="detail_header_description">Descripción</string>
+    <string name="detail_header_location">Localización</string>
+    <string name="detail_header_data">Datos de la ponencia</string>
+    <string name="detail_location">Ver localización</string>
     
     <!-- INFO -->
-    <string name="info_nameapp">Oficial App of the IEEE Developers Days</string>
-    <string name="info_code">This app is OpenSource, and you can get all the code at GeekyTheory repositories</string>
-    <string name="info_header_developed">Developed by:</string>
-    <string name="detail_location">Ver localización</string>
+    <string name="info_nameapp">Aplicación oficial del IEEE Developers Days</string>
+    <string name="info_code">Esta aplicación es de código abierto, y puede ser consultado en los repositorios de GeekyTheory</string>
+    <string name="info_header_developed">Desarrollado por:</string>
 
     <!-- PLACES -->
-    <string name="places_textview_map">Maps</string>
-    <string name="places_locations_talks">Talk\'s location</string>
-    <string name="places_locations_hackathon">Hackathon\'s location</string>
-    <string name="places_locations_lunch">Restaurant</string>
-    <string name="places_locations_parking">Parking</string>
+    <string name="places_textview_map">Mapas</string>
+    <string name="places_locations_talks">Localización de las charlas</string>
+    <string name="places_locations_hackathon">Localización del hackathon</string>
+    <string name="places_locations_lunch">Cafetería / Restaurante</string>
+    <string name="places_locations_parking">Aparcamientos</string>
 
     <!-- SOCIAL -->
-    <string name="social_nomedia_nointernet">Can\'t retrieve tweets</string>
-    <string name="social_nomedia_donwloading">Retrieving tweets</string>
+    <string name="social_nomedia_nointernet">No se pueden descargar Tweets</string>
+    <string name="social_nomedia_donwloading">Descargando tweets</string>
 
     <!-- MENU -->
-    <string name="action_about">About</string>
+    <string name="action_about">Información</string>
     
     <!-- EVENT INFO -->
     <string name="event_arduino_name">Mario Perez</string>
@@ -79,22 +79,22 @@
     <string name="event_ieee_des">Desde IEEE Sección España, uno de sus representantes vendrá a nuestras jornadas de Developer Days para realizar una ponencia sobre el punto de vista actual en torno al desarrollo libre. Docente de la Universidad Politécnica de Madrid y Presidente del capítulo español de IEEE Computer.</string>
     <string name="event_ieee_loc">Aula Magna, Altabix</string>
     <string name="event_ieee_time">Viernes, 12:00 - 14:00</string>
-    <string name="event_ieee_title">IEEE Computer talk</string>
+    <string name="event_ieee_title">Charla IEEE Computer</string>
     <string name="event_ieee_url">http://ieeespain.org</string>
     
     <string name="event_intelec_name">Intelec</string>
     <string name="event_intelec_buis"> </string>
     <string name="event_intelec_des">Intelec nos plantea una charla sobre el estado actual, formación y salidas de un futuro programador.</string>
     <string name="event_intelec_loc">Aula 0.7, Altabix</string>
-    <string name="event_intelec_time">Friday, 16:00 - 18:00</string>
-    <string name="event_intelec_title">Roundtable</string>
+    <string name="event_intelec_time">Viernes, 16:00 - 18:00</string>
+    <string name="event_intelec_title">Mesa redonda</string>
     <string name="event_intelec_url">http://intelec.es</string>
     
     <string name="event_linux_name">David Úbeda</string>
     <string name="event_linux_buis">Docente UMH</string>
     <string name="event_linux_des">David Úbeda, docente e investigador de la UMH,  organiza una Install Party de Linux para acercar este sistema operativo al público en general.</string>
     <string name="event_linux_loc">Aula de Informática 2ª Planta, Altet</string>
-    <string name="event_linux_time">Thursday, 12:00 - 14:00</string>
+    <string name="event_linux_time">Jueves, 12:00 - 14:00</string>
     <string name="event_linux_title">Install Party</string>
     <string name="event_linux_url"></string>
     
@@ -102,7 +102,7 @@
     <string name="event_microsoft_buis">Microsoft</string>
     <string name="event_microsoft_des">Microsoft nos ofrece una charla técnica en torno a las posibilidades que ofrecen sus herramientas de cara al desarrollo de software.</string>
     <string name="event_microsoft_loc">Aula 0.7, Altabix</string>
-    <string name="event_microsoft_time">Friday, 18:00 - 19:00</string>
+    <string name="event_microsoft_time">Viernes, 18:00 - 19:00</string>
     <string name="event_microsoft_title">Desarrollo con Microsoft</string>
     <string name="event_microsoft_url"></string>
     
@@ -110,15 +110,15 @@
     <string name="event_money_buis">LCSI UMH</string>
     <string name="event_money_des">Desarrollador Android y profesora e investigadora en el Laboratorio de Control y Sistemas Inteligentes de la Universidad Miguel Hernández. Impartirá una charla sobre las diferentes maneras de monetizar aplicaciones Android.</string>
     <string name="event_money_loc">Aula 0.2, Altabix</string>
-    <string name="event_money_time">Friday, 10:00 - 12:00</string>
-    <string name="event_money_title">App Billing</string>
+    <string name="event_money_time">Viernes, 10:00 - 12:00</string>
+    <string name="event_money_title">Monetización de Apps</string>
     <string name="event_money_url">http://lcsi.umh.es</string>
     
     <string name="event_node_name">Microsoft Staff</string>
     <string name="event_node_buis">Microsoft</string>
     <string name="event_node_des">Pedro Hurtado presenta un taller basado en el entorno de programación Node.js sobre la capa servidor en el lenguaje de programación JavaScript e implementaciones del modelo MVVM.</string>
     <string name="event_node_loc">Aula de Informática 2.4, Altabix</string>
-    <string name="event_node_time">Friday, 10:00 - 12:00</string>
+    <string name="event_node_time">Viernes, 10:00 - 12:00</string>
     <string name="event_node_title">Taller Node.js</string>
     <string name="event_node_url"></string>
     
@@ -126,7 +126,7 @@
     <string name="event_opencv_buis">GeekyTheory</string>
     <string name="event_opencv_des">Redactor de Geeky Theory y estudiante de la UMH, Jesualdo Ros nos dará un pequeño taller sobre OpenCV, sus posibilidades y usos.</string>
     <string name="event_opencv_loc">Aula de Informática 2.2, Altabix</string>
-    <string name="event_opencv_time">Thursday, 16:00 - 18:00</string>
+    <string name="event_opencv_time">Jueves, 16:00 - 18:00</string>
     <string name="event_opencv_title">Taller OpenCV</string>
     <string name="event_opencv_url">http://geekytheory.com</string>
     
@@ -134,7 +134,7 @@
     <string name="event_otp_buis">Yuilop</string>
     <string name="event_otp_des">Manuel Rubio, autor del libro Un Mundo Concurrente y miembre de Yuilop, nos acerca la computación distribuida a través de una charla técnica que incluirá ejemplos de cómo es el lenguaje y lo que permite.</string>
     <string name="event_otp_loc">Aula de Informática 2.3, Altabix</string>
-    <string name="event_otp_time">Thursday, 16:00 - 18:00</string>
+    <string name="event_otp_time">Jueves, 16:00 - 18:00</string>
     <string name="event_otp_title">Erlang/OTP</string>
     <string name="event_otp_url">http://yuilop.com/es/</string>
     
@@ -142,15 +142,15 @@
     <string name="event_SL_buis">Avanza Soluciones</string>
     <string name="event_SL_des">Desarrollador de negocios, director de proyectos en Avanza Soluciones y emprendedor. Nos trae su punto de vista particular sobre el Software Libre y la empresa.</string>
     <string name="event_SL_loc">Aula Magna, Altabix</string>
-    <string name="event_SL_time">Thursday, 10:00</string>
-    <string name="event_SL_title">OpenSource talk</string>
+    <string name="event_SL_time">Jueves, 10:00</string>
+    <string name="event_SL_title">Charlas tecnicas</string>
     <string name="event_SL_url">http://avanzaeninternet.com</string>
     
     <string name="event_aisoy_name">Diego Garcia</string>
     <string name="event_aisoy_buis">AISoy Robotics</string>
     <string name="event_aisoy_des">Apasionados de la inteligencia artificial y la robótica, AISoy Robotics nos proporcionará una pequeña charla técnica en torno a uno de sus últimos desarrollos, el AISoy 1, basado en Raspberry Pi.</string>
     <string name="event_aisoy_loc">Aula Magna, Altabix</string>
-    <string name="event_aisoy_time">Thursday, 10:40</string>
+    <string name="event_aisoy_time">Jueves, 10:40</string>
     <string name="event_aisoy_title">AISoy Robotics</string>
     <string name="event_aisoy_url">http://aisoy.com</string>
     
@@ -158,7 +158,7 @@
     <string name="event_yuilop_buis">Yuilop</string>
     <string name="event_yuilop_des">Teniendo como objetivo el hacer que las comunicaciones móviles sean gratuitas independientemente del destinatario, Yuilop es una empresa desarrolladora de apps revolucionaria en el mercado de los smartphones.</string>
     <string name="event_yuilop_loc">Aula Magna, Altabix</string>
-    <string name="event_yuilop_time">Thursday, 11:20</string>
+    <string name="event_yuilop_time">Jueves, 11:20</string>
     <string name="event_yuilop_title">Yuilop</string>
     <string name="event_yuilop_url">http://yuilop.com/es/</string>
     
@@ -166,16 +166,16 @@
     <string name="event_wp_buis">GeekyTheory</string>
     <string name="event_wp_des">Dachi Gogotchuri, miembro de la rama IEEE UMH SB y redactor de Geeky Theory, nos presenta este taller con los pasos necesarios para entrar en el mundo de la programación para Windows Phone.</string>
     <string name="event_wp_loc">Aula de Informática 2.3, Altabix</string>
-    <string name="event_wp_time">Thursday, 12:00 - 14:00</string>
-    <string name="event_wp_title">Introduction to WP</string>
+    <string name="event_wp_time">Jueves 12:00 - 14:00</string>
+    <string name="event_wp_title">Introducción a WP</string>
     <string name="event_wp_url">http://geekytheory.com</string>
     
     <string name="event_wp2_name">Guillermo Bas</string>
     <string name="event_wp2_buis">SolidQ</string>
     <string name="event_wp2_des">Desde SolidQ no enseñaran como crear nuestro propio lector RSS para el entorno de Windows Phone, conectado con nuestro taller de introducción al lenguaje.</string>
     <string name="event_wp2_loc">Aula de Informática 2.3, Altabix</string>
-    <string name="event_wp2_time">Thursday, 18:00 - 20:00</string>
-    <string name="event_wp2_title">RSS with WP</string>
+    <string name="event_wp2_time">Jueves, 18:00 - 20:00</string>
+    <string name="event_wp2_title">RSS con WP</string>
     <string name="event_wp2_url">http://solidq.com</string>
     
     

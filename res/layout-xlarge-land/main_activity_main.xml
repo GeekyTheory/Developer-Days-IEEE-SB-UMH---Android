@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:baselineAligned="false"
+    android:background="@drawable/tiled_back"
+    android:layout_height="match_parent"
+    android:id="@+id/main_responsive_main"
+    android:padding="16dp">
+    
+	<FrameLayout class="com.geekytheory.miguelcatalandev.developerdays.Main_Fragment_Timetable"
+	    android:id="@+id/main_responsive_fragment_timetable"
+	    android:layout_weight="1"
+	    android:layout_width="0px"
+	    android:layout_marginRight="16dp"
+	    android:layout_height="match_parent" />
+	
+	<FrameLayout class="com.geekytheory.miguelcatalandev.developerdays.Main_Fragment_Places"
+	    android:id="@+id/main_responsive_fragment_places"
+	    android:layout_weight="1"
+	    android:layout_width="0px"
+	    android:layout_marginRight="16dp"
+	    android:layout_height="match_parent" />
+	
+	<FrameLayout class="com.geekytheory.miguelcatalandev.developerdays.Main_Fragment_Social"
+	    android:id="@+id/main_responsive_fragment_social"
+	    android:layout_weight="1"
+	    android:layout_width="0px"
+	    android:layout_height="match_parent" />
+	
+</LinearLayout>

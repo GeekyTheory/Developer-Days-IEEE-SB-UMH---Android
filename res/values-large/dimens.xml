@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- Timetable -->
+	<dimen name="timetable_row_height">80dp</dimen>
+	
+	<!-- Places -->
+	<dimen name="places_imageview_height_map">250dp</dimen>
+	<dimen name="places_textview_size_map">25sp</dimen>
+	
+	<!-- Detail -->
+	<dimen name="detail_imageview_height_map">200dp</dimen>
+	<dimen name="detail_imageview_profile_size">150dp</dimen>
+	<dimen name="detail_textview_title_size">22sp</dimen>
+	<dimen name="detail_textview_normal_size">18sp</dimen>
+</resources>
