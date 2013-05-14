@@ -11,4 +11,7 @@
     
     <!-- TimeTable -->
     <color name="dd_timetable_hour_brackground">#E1E1E1E1</color>
+    
+    <!-- TextView -->
+    <color name="dd_textview_secondary">#B9B9B9</color>
 </resources>

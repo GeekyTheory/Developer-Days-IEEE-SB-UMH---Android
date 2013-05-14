@@ -17,7 +17,7 @@
     <string name="timetable_talks_aisoy">AISoy</string>
     <string name="timetable_talks_yuilop">Yuilop</string>
     <string name="timetable_talks_linux">Taller Linux</string>
-    <string name="timetable_talks_wp">Taller Windows Phone</string>
+    <string name="timetable_talks_wp">Introducción a WP</string>
     <string name="timetable_talks_lunch">Comida y networking</string>
     <string name="timetable_talks_otp">Taller Erlang/OTP</string>
     <string name="timetable_talks_opencv">Taller OpenCV</string>
@@ -61,7 +61,6 @@
     <string name="event_arduino_buis">GeekyTheory</string>
     <string name="event_arduino_des">Dejando a un lado el lado software Mario Pérez, presidente de la IEEE UMH SB y redactor de Geeky Theory, dará un taller sobre la plataforma de hardware libre Arduino con ejemplos y proyectos realizados.</string>
     <string name="event_arduino_loc">Aula de Informática 2.2, Altabix</string>
-    <string name="event_arduino_loc2">Aula de Informática 2.4, Altabix</string>
     <string name="event_arduino_time">Jueves, 18:00 - 20:00</string>
     <string name="event_arduino_title">Taller Arduino</string>
     <string name="event_arduino_url">http://geekytheory.com</string>

@@ -117,7 +117,7 @@ public class Main_Fragment_Timetable extends Fragment implements
 			intent.putExtra("image", R.drawable.mario_perez_geekytheory);
 			intent.putExtra("buis", getString(R.string.event_arduino_buis));
 			intent.putExtra("des", getString(R.string.event_arduino_des));
-			intent.putExtra("loc", getString(R.string.event_arduino_loc2));
+			intent.putExtra("loc", getString(R.string.event_arduino_loc));
 			intent.putExtra("time", getString(R.string.event_arduino_time));
 			intent.putExtra("title", getString(R.string.event_arduino_title));
 			intent.putExtra("url", getString(R.string.event_arduino_url));

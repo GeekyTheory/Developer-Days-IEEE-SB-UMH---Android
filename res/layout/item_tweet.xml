@@ -18,7 +18,7 @@
             android:layout_height="50dp"
             android:src="@drawable/person_image_empty" />
 
-        <TextView
+        <com.geekytheory.miguelcatalandev.developerdays.utils.RobotoTextView
             android:id="@+id/social_itemtweet_textview_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,9 +27,10 @@
             android:layout_toRightOf="@+id/social_itemtweet_imageView_user"
             android:ellipsize="end"
             android:singleLine="true"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            fonts:font="Roboto" />
 
-        <TextView
+        <com.geekytheory.miguelcatalandev.developerdays.utils.RobotoThinTextView
             android:id="@+id/social_itemtweet_textview_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,21 +38,26 @@
             android:layout_marginLeft="8dp"
             android:layout_toRightOf="@+id/social_itemtweet_textview_name"
             android:ellipsize="end"
-            android:singleLine="true" />
+            android:textColor="@color/dd_textview_secondary"
+            android:singleLine="true"
+            fonts:font="Roboto" />
 
-        <TextView
+        <com.geekytheory.miguelcatalandev.developerdays.utils.RobotoThinTextView
             android:id="@+id/social_itemtweet_textview_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/dd_textview_secondary"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            fonts:font="Roboto" />
 
-        <com.geekytheory.miguelcatalandev.developerdays.utils.RobotoTextView
+        <com.geekytheory.miguelcatalandev.developerdays.utils.RobotoThinTextView
             android:id="@+id/social_itemtweet_textview_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/social_itemtweet_textview_name"
             android:layout_below="@+id/social_itemtweet_textview_name"
+            android:textStyle="normal"
             fonts:font="Roboto" />
     </RelativeLayout>
 
