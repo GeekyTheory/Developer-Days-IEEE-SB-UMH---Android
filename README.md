@@ -1,10 +1,13 @@
 ##Developer Days IEEE SB UMH - Android
 Repositorio con el código de la aplicación guía desarrollada para el evento de programación "[Developer Days][4]" organizado por la [Rama Estudiantil del IEEE en la Universidad Miguel Hernandez][3], desarrollado por [GeekyTheory][1] ([MiguelCatalanDev][2])
 
+###Warning!
+Twitter a actualizado su API a la versión 1.1 y la "sección social" ya no es funcional. Para solucionarlo habria que implementar toda la API de Twitter en la App.
+
 ###Utilización
 * Simplemente decarga el código haciendo un clone o un fork.
 * Agrega tu API-Key de GoogleMaps para poder ejecutarlo.
-* Enjoy the codding!
+* Enjoy coding!
 
 ###License
 
