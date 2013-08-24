@@ -61,7 +61,7 @@ public class RobotoTextView extends TextView{
 	private void init(AttributeSet attrs) throws Exception {
         // Con esto controlamos que podremos seguir usando las fuentes del sistema si queremos
         // Obtenemos la fuente elegida que tiene que estar almacena en el directorio assets
-        String fuente = attrs.getAttributeValue("http://schemas.android.com/apk/res/com.umh.umh", "fuente");
+        String fuente = attrs.getAttributeValue("http://schemas.android.com/apk/res/ccom.geekytheory.miguelcatalandev.developerdays", "fuente");
         // Y comprobamos el estilo (Bold = 0x1, Italic = ???)
         String style = attrs.getAttributeValue("http://schemas.android.com/apk/res/android", "textStyle");
                 

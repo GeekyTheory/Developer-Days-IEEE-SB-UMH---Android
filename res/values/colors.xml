@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
     <!-- General -->
     <color name="dd_header_texview">#000000</color>
     <color name="dd_header_texview_line">#AAAAAA</color>
@@ -14,4 +13,7 @@
     
     <!-- TextView -->
     <color name="dd_textview_secondary">#B9B9B9</color>
+    
+    <!-- URL -->
+    <color name="dd_textview_url">#ff33b5e5</color>
 </resources>

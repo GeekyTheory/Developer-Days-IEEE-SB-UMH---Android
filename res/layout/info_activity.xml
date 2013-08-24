@@ -91,7 +91,7 @@
                 android:clickable="true"
                 android:textSize="@dimen/detail_textview_normal_size"
                 android:text="miguel@geekytheory.com"
-                android:textColor="@color/abs__holo_blue_light"
+                android:textColor="@color/dd_textview_url"
                 android:textIsSelectable="true" />
         </RelativeLayout>
 
